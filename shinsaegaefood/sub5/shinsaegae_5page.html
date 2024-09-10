@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>채용 - SHINSEGAE FOOD</title>
+    <link rel="stylesheet" href="./css/shinsaegae_5page.css">
+    <link rel="icon" type="image/x-icon" href="./images/faviconV2.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            var menu=$("nav > ul > li");
+            var sub=$("nav > ul > li ul.sub");
+            sub.hide();
+            $(document).ready(function(){
+                $("nav > ul > li > ul.sub:eq(0)").show()
+            menu.hover(function(){
+                sub.hide();
+                
+                $(this).find(sub).show()
+            }, function(){
+                $("div.art_box").hide()
+            })
+        })
+        })
+        $(function(){
+            $(window).scroll(function(){
+                if ($("this").scrollTop()>200) {
+                    $('#top').fadeIn();
+                }else{
+                    
+                }
+                })
+            
+            $('#top').click(function(){
+                $('html, body').animate({
+                    scrollTop : 0
+                },400);
+                return false;
+                });
+            var subb = $("footer div.footer_box3 div.listbox");
+            subb.hide()
+            $("footer div.footer_box3 a#rlrlrl").hover(
+            function(){
+                    $(subb).show();
+                },function(){
+                    $(subb).hide()
+                }
+            );
+            });
+    </script>
+</head>
+<body>
+    <header>
+        <h2 class="hidden">헤더영역</h2>
+            <div id="head">
+                <h1><a href="../main/index.html"><img src="./images/logo.png" alt="shinsaegae_food"></a></h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="../sub1/shinsaegae_1page.html">COMPANY</a>
+                                <ul class="sub">
+                                    <li><a href="#">story</a></li>
+                                    <li><a href="#">pr</a></li>
+                                    <li><a href="#">ir</a></li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a href="../sub2/shinsaegae_2page.html">BUSINESS</a>
+                            <ul class="sub" style="margin-left: 20px;">
+                                <li><a href="#">식품제조/유통</a></li>
+                                <li><a href="#">푸드서비스</a></li>
+                                <li><a href="#">프리미엄 다이닝</a></li>
+                                <li><a href="#">베이커리</a></li>
+                                <li><a href="#">프랜차이즈</a></li>
+                                <li><a href="#">자회사</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../sub3/shinsaegae_3page.html" >ESG</a>
+                            <ul class="sub" style="margin-right: -10px;">
+                                <li><a href="#">가치체계</a></li>
+                                <li><a href="#">친환경경영</a></li>
+                                <li><a href="#">품질·안전경영</a></li>
+                                <li><a href="#">투명경영</a></li>
+                                <li><a href="#">상생경영</a></li>
+                                <li><a href="#">사회공헌</a></li>
+                                <li><a href="#">ESG 정보</a></li>
+                                <li><a href="#">신세계푸드 신문고(제보)</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../sub4/shinsaegae_4page.html">고객지원</a>
+                            <ul class="sub"style="margin-left: 170px;">
+                                <li><a href="#">고객의 소리</a></li>
+                                <li><a href="#">외식브랜드 가맹 및</a></li>
+                                <li><a href="#">위탁급식 상담</a></li>
+                                <li><a href="#">식자재 구매 상담</a></li>
+                                <li><a href="#">식자재 납품 상담</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../sub5/shinsaegae_5page.html">채용</a>
+                            <ul class="sub" style="margin-left: 280px;">
+                                <li><a href="../sub5_1/shinsaegae_5_1page.html">인재상</a></li>
+                                <li><a href="#">인사제도</a></li>
+                                <li><a href="#">복리후생</a></li>
+                                <li><a href="#">직무소개</a></li>
+                                <li><a href="#">채용 프로세스</a></li>
+                                <li><a href="#">채용 공고</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="bg"></div>
+                    <div class="inputbox">
+                        <input type="search"><img src="./images/btn_search.png">
+                    </div>
+                </nav>
+            </div>
+            <hr />
+
+</header>
+    <!-- visual area -->
+    <article>
+        <h2 class="hidden">비주얼영역</h2>
+        <div class="artimage">
+            <div class="art_box2">
+                <span><img src="./images/sb_title_recruit.png"></span>
+                <span>채용</span>
+            </div>
+        </div>
+    </article>
+    <!-- contert area-->
+    <section>
+        <h2 class="hidden">컨텐츠영역</h2>
+        <div class="content1">
+            <p>신세계는 임직원의 소중한 꿈이 실현되는 일터를 만들어갑니다.</p>
+            <div class="con1">
+                <a href="#"><img src="./images/recruit_nav_list01.png" style="height: 300px;"></a>
+                <dl>
+                    <dt>인재상</dt>
+                    <dd>다양한 변화를 수용하면서<br />열린 마음으로 바른 길을<br/> 지향하는 참다운 인재를<br/> 추구합니다.</dd>
+                </dl>
+            </div>
+            <div class="con2">
+                <a href="#"><img src="./images/recruit_nav_list02.png"style="height: 300px;"></a>
+                <dl>
+                    <dt>인사제도</dt>
+                    <dd>능력과 업적에 따른<br/>인사제도 실현, 인격과<br/>개성을 존중하는 기업문화<br/>정착을 추구합니다.</dd>
+                </dl>
+            </div>
+            <div class="con3">
+                <a href="#"><img src="./images/recruit_nav_list03.png"style="height: 300px;"></a>
+                <dl>
+                    <dt>복리후생</dt>
+                    <dd>일과 삶의 균형<br/> 각종 복리후생 제도를 <br/>통하여 직원들의 삶의 질<br/>향상을 도모하고 있습니다.</dd>
+                </dl>
+            </div>
+            <div class="con4">
+                <a href="#"><img src="./images/recruit_nav_list04.png"style="height: 300px;"></a>
+                <dl>
+                    <dt>직무소개</dt>
+                    <dd>여러분의 소중한 꿈을<br/>
+                    신세계푸드에서 활짝<br/>
+                    펼쳐나가시길 바랍니다.</dd>
+                </dl>
+            </div>
+            <div class="con5">
+                <a href="#"><img src="./images/recruit_nav_list05.png"style="height: 300px;"></a>
+                <dl>
+                    <dt>채용 프로세스</dt>
+                    <dd>신세계푸드의 채용 흐름을 <br/>한 눈에 볼수 있도록 자세한<br/>채용 절차를 알려드립니다.</dd>
+                </dl>
+            </div>
+            <div class="con6">
+                <a href="#"><img src="./images/recruit_nav_list06.png"style="height: 300px;"></a>
+                <dl>
+                    <dt>채용공고</dt>
+                    <dd>신세계푸드의 현재<br/>
+                        진행중인 채용공고, 상시 <br/>채용공고를 확인할 수 <br/>있습니다.</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+    <!--footer area-->
+    <footer>
+        <hr />
+        <div class="footer_box1">
+        <ul>
+            <li><a href="#">법적 고지</a></li>
+            <li id="white"><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">영상정보처리기기 운영 관리 방침</a></li>
+            <li><a href="#">이메일주소 무단수집 거부</a></li>  
+            <li><a href="#">사이트맵</a></li>         
+        </ul>
+            <div class="footer_box2">
+            <span>서울시 성동구 성수일로 56 백영성수센터 (주)신세계푸드</span>
+            <address><a href="#">TEL 02-3397-6000 / <a href="#"></a>FAX 02-3397-6199 / </a><a href="#"></a>사업자등록번호 : 215-81-47377</a></address>
+            </ul>
+            <small>Copyright &copy; 2015 SHINSAGAE FOOD Inc. ALL RIGHT RESERVED</small>
+        </div>
+        <div class="footer_box3">
+            <a href="#none" onclick="return false" id="rlrlrl" >Related Link</a>
+            <div class="listbox">
+                <ul>
+                    <li>
+                        <a href="#">신세계그룹</a>
+                    </li>
+                    <li>
+                        <a href="#">신세계푸드 </a>
+                    </li>
+                    <span>Retail</span>
+                    <li>
+                        <a href="#">신세계백화점</a>
+                    </li>
+                    <li>
+                        <a href="#">이마트</a>
+                    </li>
+                    <li>
+                        <a href="#">이마트 트레이더스</a>
+                    </li>
+                    <li>
+                        <a href="#">이마트 에브리데이</a>
+                    </li>
+                    <li>
+                        <a href="#">이마트24</a>
+                    </li>
+                    <li>
+                        <a href="#">신세계TV쇼핑</a>
+                    </li>
+                    <li>
+                        <a href="#">프리미엄 아울렛</a>
+                    </li>
+                    <li>
+                        <a href="#">스타필드</a>
+                    </li>
+                    <li>
+                        <a href="#">신세계 면세점</a>
+                    </li>
+                    <li>
+                        <a href="#">신세계 인터네셔날</a>
+                    </li>
+                    <span>food</span>
+                    <li>
+                        <a href="#">신세계 L&B</a>
+                    </li>
+                    <li>
+                        <a href="#">스타벅스 코리아</a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <span>LEISURE</span>
+                    <li>
+                        <a href="#">조선호텔리조트</a>
+                    </li>
+                    <span>INFRASTRUCTURE</span>
+                    <li>
+                        <a href="#">신세계 건설</a>
+                    </li>
+                    <li>
+                        <a href="#">신세계 아이엔씨</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <p id="top"><a href="#head">TOP</a></p>

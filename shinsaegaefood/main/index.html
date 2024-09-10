@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHINSEGAE FOOD</title>
+
+    <link rel="icon" type="image/x-icon" href="./image/faviconV2.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" >
+    <link rel="stylesheet" href="./css/shinsaegae_food.css" /><script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".brand_box", {});
+   
+      $(function () {
+        var sub = $("#menu3");
+        sub.hide();
+
+        $("div.nav_bar").click(function () {
+          $("#main").hide();
+          sub.show();
+        });
+        var suv = $(".ebox");
+
+        $("#menu div.ebox img").click(function () {
+          $("#menu3").hide();
+          $("#main").show();
+        });
+
+        $(window).scroll(function () {
+          if ($("this").scrollTop() > 200) {
+            $("#top").fadeIn();
+          } else {
+          }
+        });
+
+        $("#top").click(function () {
+          $("html, body").animate(
+            {
+              scrollTop: 0,
+            },
+            400
+          );
+          return false;
+        });
+
+        var n = 0;
+        var pos;
+
+        $("#top").click(function () {
+          $("html, body").animate(
+            {
+              scrollTop: 0,
+            },
+            400
+          );
+          return false;
+        });
+        $(function () {
+          var subb = $("footer div.footer2 div.button1 div.listbox ul.ft3 ");
+          subb.hide();
+          $("footer > div.footer2 > div.button1 > a#rlrlrl").hover(
+            function () {
+              $(subb).show();
+            },
+            function () {
+              $(subb).hide();
+            }
+          );
+        });
+      });
+      $(document).ready(function () {
+        $(".center").slick({
+          rows: 1,
+          centerMode: true,
+          centerPadding: "60px",
+          slidesToShow: 5,
+          initialSlide: 0,
+          cednterMode: false, 
+          draggable: true,
+          pauseOnDotsHover: true,
+          prevArrow: $("#prevArrow"),
+          nextArrow: $("#nextArrow"),
+        });
+
+        $("#prevArrow").click(function () {
+          $(".center").slick("slickPrev");
+        });
+
+        $("#nextArrow").click(function () {
+          $(".center").slick("slickNext");
+        });
+      });
+
+
+    </script>
+  </head>
+  <body>
+    <!--헤더-->
+    <div id="main">
+      <header>
+        <h2 class="hidden">헤더영역</h2>
+        <div class="nav_bar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <h1>
+          <a href="../main/index.html"
+            ><img
+              src="./image/logo/logo_b_277.png"
+              alt="로고"
+              style="width: 190px; height: 17px; margin-bottom: 5px"
+          /></a>
+        </h1>
+        <div id="header_inner">
+          <ul>
+            <li><a href="../sub1/shinsaegae_1page.html">COMPANY</a></li>
+            <li><a href="../sub2/shinsaegae_2page.html">BUSINESS</a></li>
+            <li><a href="../sub3/shinsaegae_3page.html">ESG</a></li>
+            <li><a href="../sub4/shinsaegae_4page.html">고객지원</a></li>
+            <li><a href="../sub5/shinsaegae_5page.html">채용</a></li>
+          </ul>
+          <div class="search_box">
+            <span
+              ><input type="text" /><img src="./image/btn/ico_search_25.png"
+            /></span>
+          </div>
+        </div>
+      </header>
+      <!--비주얼-->
+      <div id="back"></div>
+      <article>
+        <h2 class="hidden">비주얼영역</h2>
+        <div class="article_image">
+          <img src="./image/bg_visual.png" alt="" />
+        </div>
+      </article>
+
+      <!--컨텐츠-->
+      <section>
+        <h2 class="hidden">컨텐츠영역</h2>
+        <div class="foodon_box">
+          <strong>FOOD ON</strong>
+          <span id="prevArrow">prev</span>
+            <div class="center">
+              <div class="box">
+                <a href="https://blog.naver.com/ssgfood_official/223492788798">
+                  <img src="./image/main_foodon_240627.jpg" alt="" />
+                  <div>이건 <br />특급 삼계탕이야</div>
+                </a>
+              </div>
+              <div class="box" style="width: 270px">
+                <a href="https://blog.naver.com/ssgfood_official/223489282590">
+                  <img src="./image/main_foodon_240624.png" alt="" />
+                  <div>무더위 타파! <br />여름타팥크림빵</div>
+                </a>
+              </div>
+              <div class="box">
+                <a href="https://blog.naver.com/ssgfood_official/223475643214">
+                  <img src="./image/main_foodon_240611.png" alt="" />
+                  <div>이번에는<br />사천불짜장 2,900원</div>
+                </a>
+              </div>
+              <div class="box">
+                <a href="https://blog.naver.com/ssgfood_official/223455517991">
+                  <img src="./image/main_foodon_240523.png" alt="" />
+                  <div>HEALTHY FOODS<br />MUST GO ON!</div>
+                </a>
+              </div>
+              <div class="box">
+                <a
+                  href="https://www.instagram.com/p/C55S7Csyvx7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D&img_index=1"
+                >
+                  <img src="./image/main_foodon_240522.png" alt="" />
+                  <div>유아왓유잇<br />이제 이마트에서</div>
+                </a>
+              </div>
+              <div class="box">
+                <a href="https://blog.naver.com/ssgfood_official/223435417713">
+                  <img src="./image/main_foodon_240509.png" alt="" />
+                  <div>먹는 재미에<br />즐기는 재미까지!</div>
+                </a>
+              </div>
+              <div class="box">
+                <a
+                  href="https://litt.ly/tasty_shinsegaefood?utm_source=littly-tasty_shinsegae&utm_medium=link&utm_id=homepage-littly-tasty_shinsegae"
+                >
+                  <img
+                    src="./image/main_foodOn_hotelCollection_2.png"
+                    alt="얼려야맛이산다"
+                  />
+                  <div>호텔 컬렉션 <br />얼려야 맛이 산다</div>
+                </a>
+              </div>
+              <div class="box">
+                <a
+                  href="https://www.instagram.com/p/C5PWhL3v86o/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D"
+                >
+                  <img
+                    src="./image/main_foodOn_nbb_240403_01.png"
+                    alt="추신수"
+                  />
+                  <div>유소년 야구지원<br />프로젝트 '추신水'</div>
+                </a>
+              </div>
+              <div class="box">
+                <a
+                  href="https://www.youtube.com/watch?v=ObpzH9UmqRA&feature=youtu.be"
+                >
+                  <img src="./image/main_foodOn_devilsDoor.png" alt="" />
+                  <div>데블스도어<br />JAZZ IN THE CITY</div>
+                </a>
+              </div>
+              <div class="box">
+                <a
+                  href="https://gift.kakao.com/product/1272341?input_channel_id=2630"
+                >
+                  <img
+                    src="./image/main_foodOn_vecchiaenuovo.png"
+                    alt="치즈케이크출시"
+                  />
+                  <div>베키아에누보<br />NEW 치즈케이크 출시</div>
+                </a>
+              </div>
+              <div class="box">
+                <a href="https://www.shinsegaefood.com/brand/ywe/dining.html">
+                  <img
+                    src="./image/main_foodOn_ywe1.png"
+                    alt="유아왓유잇메뉴"
+                  />
+                  <div>유아왓유잇<br />MENU</div>
+                </a>
+              </div>
+            </div>
+            <div class="cut">
+          </div>
+          <span id="nextArrow">next</span>
+        </div>
+
+        <div id="bbb">
+          <div class="back"></div>
+          <div class="youtube1">
+            <iframe
+              width="1250"
+              height="703"
+              style="border-radius: 40px"
+              src="https://www.youtube.com/embed/e660WBwj_tM"
+              title="You are What You Eat"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="brands">
+            <div class="brand_box">
+              <strong>BRANDS</strong>
+              <div class="boxbox">
+                <ul>
+                  <li>
+                    <div>
+                      <a href="#">
+                        <img
+                          src="./image/logo/main_brands_logo_ywe.png"
+                          style="
+                            width: 180px;
+                            height: 90px;
+                            margin-top: 170px;
+                            margin-left: 40px;
+                          "
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a href="#">
+                        <img
+                          src="./image/logo/main_brands_logo_betterMeat.png"
+                          style="
+                            width: 140px;
+                            height: 90px;
+                            margin-top: 170px;
+                            margin-left: 65px;
+                          "
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a href="#">
+                        <img
+                          src="./image/logo/main_brands_logo_hotelCollection.png"
+                          style="
+                            width: 165px;
+                            height: 85px;
+                            margin-top: 170px;
+                            margin-left: 50px;
+                          "
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a href="#">
+                        <img
+                          src="./image/logo/main_brands_logo_olbaan.png"
+                          style="
+                            width: 115px;
+                            height: 85px;
+                            margin-top: 170px;
+                            margin-left: 75px;
+                          "
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a href="#">
+                        <img
+                          src="./image/logo/main_brands_logo_nbb.png"
+                          style="
+                            width: 185px;
+                            height: 45px;
+                            margin-top: 190px;
+                            margin-left: 45px;
+                          "
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a href="#">
+                        <img
+                          src="./image/logo/main_brands_logo_ubj.png"
+                          style="
+                            width: 185px;
+                            height: 65px;
+                            margin-top: 180px;
+                            margin-left: 42px;
+                          "
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a href="#">
+                        <img
+                          src="./image/logo/main_brands_logo_devilsDoor.png"
+                          style="
+                            width: 185px;
+                            height: 55px;
+                            margin-top: 190px;
+                            margin-left: 43px;
+                          "
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a href="#">
+                        <img
+                          src="./image/logo/main_brands_logo_boulangerie.png"
+                          style="
+                            width: 100px;
+                            height: 85px;
+                            margin-top: 170px;
+                            margin-left: 103px;
+                          "
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a href="#">
+                        <img
+                          src="./image/logo/main_brands_logo_nbp.png"
+                          style="
+                            width: 185px;
+                            height: 20px;
+                            margin-top: 205px;
+                            margin-left: 43px;
+                          "
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a href="#">
+                        <img
+                          src="./image/logo/main_brands_logo_oslo.png"
+                          style="
+                            width: 150px;
+                            height: 80px;
+                            margin-top: 170px;
+                            margin-left: 60px;
+                          "
+                        />
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="btn_gr">
+              <span class="prev">prev</span>
+              <span class="next">next</span>
+            </div>
+          </div>
+          <div class="yt">
+            <iframe
+              width="1250"
+              height="703"
+              style="border-radius: 40px"
+              src="https://www.youtube.com/embed/VQSk6vDlcpY"
+              title="[SF급 고민상담쇼-든든파워2]맛.잘.알. 스타들의 맛집 넘버원 양꼬치를 줄 서지 않고 먹는 방법 | EP.11"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="content">
+            <strong>CONTENTS</strong>
+            <div class="content_box">
+              <ul>
+                <li>
+                  <div>
+                    <a href="#"
+                      >신세계푸드, 고물가와 어른 무더위에 올반 <br />삼계탕
+                      간편식 인기</a
+                    >
+                    <span>
+                      <a href="#">24.06.27</a>
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="#"
+                      >[셰프 GPT] AI에게 여름 보양식 레시피를<br />물어봤습니다.
+                      | 마소김 | 은수저 | EP.4</a
+                    >
+                    <span>
+                      <a href="#">24.06.27</a>
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="#"
+                      >신세계푸드, 얼려먹는 이색 베이커리 '여름<br />타팥
+                      크림빵' 출시</a
+                    >
+                    <span>
+                      <a href="#">24.06.24</a>
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="#"
+                      >"리얼 버번 하이볼 맛보세요"... 신세계푸드
+                      <br />'데블스도어','에반 윌리엄스'하이볼 출시</a
+                    >
+                    <span>
+                      <a href="#">24.06.20</a>
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="#"
+                      >분위기 있는 저녁을 위한 위스키 그리고 로 <br />맨틱 재즈
+                      (with Yan Kim Trio)</a
+                    >
+                    <span>
+                      <a href="#">24.06.14</a>
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="#"
+                      >신세계푸드, 셀럽맛집 '넘버원 양꼬치' 중화 <br />간편식
+                      3종 출시</a
+                    >
+                    <span>
+                      <a href="#">24.06.13</a>
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="#"
+                      >노브랜드 버거, 고물가 시대 화끈한 가성비
+                      <br />'사천불짜장' 출시</a
+                    >
+                    <span>
+                      <a href="#">24.06.11</a>
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="#"
+                      >노브랜드 버거, 브랜드 콜라 x 무한의 계단 <br />
+                      콜라보 인기 ...잘파세대 통했다</a
+                    >
+                    <span>
+                      <a href="#">24.05.27</a>
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="#"
+                      >[SF급 고민상담쇼-든든파워2] 오늘 뭐 먹<br />지? 장바구니
+                      고민 해결 | EP.10</a
+                    >
+                    <span>
+                      <a href="#">24.05.24</a>
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="#"
+                      >신세계푸드, 현대카드 쿠킹 라이브러리와<br />'유아왓유잇'
+                      공동 캠페인 전개</a
+                    >
+                    <span>
+                      <a href="#">24.05.23</a>
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="#"
+                      >"어묵깡부터 하이볼까지"...노브랜드 버거, <br />MZ 겨냥
+                      이색 메뉴 눈길</a
+                    >
+                    <span>
+                      <a href="#">24.05.20</a>
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="#"
+                      >[셰프 GPT] 이게 왜 맛있어? 국가권력급<br />떡볶이, 핫도그
+                      레시피 | 마소김 | 은수저 ...</a
+                    >
+                    <span>
+                      <a href="#">24.05.16</a>
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="#"
+                      >신세계푸드, 부처님 오신 날 맞아 사찰식 베<br />이커리
+                      출시</a
+                    >
+                    <span>
+                      <a href="#">24.05.09</a>
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="#"
+                      >"버거 먹고 게임도 하고"...노브랜드 버거,<br />'무한의
+                      계단' 콜라보 잘파세대 공략 나서</a
+                    >
+                    <span>
+                      <a href="#">24.05.06</a>
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="btn_gr2">
+              <span class="prev">prev</span>
+              <span class="next">next</span>
+            </div>
+            <div class="panel">
+              <a href="#">ESG 경영</a>
+              <a href="#">고객의 소리</a>
+              <a href="#">채용</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--푸터-->
+
+      <footer>
+        <hr />
+        <h2 class="hidden">푸터영역</h2>
+        <div class="footer_box1">
+          <p>
+            더 나은 라이프 스타일,<br />
+            신세계 푸드에서 다양한 소식을 만나보세요.
+          </p>
+          <strong>주식회사</strong>
+          <strong>신세계푸드</strong>
+          <ul>
+            <li>서울시 성동구 성수일로 56 백영성수 4~7층</li>
+            <li>문의 : 02-3397-6000</li>
+            <li>팩스 : 02-3397-6199</li>
+            <li>사업자등록번호 : 215-81-47377</li>
+          </ul>
+          <br />
+          <small
+            >Copyright &copy; 2024 SHINSAGAE FOOD Inc. ALL RIGHT RESERVED</small
+          >
+        </div>
+        <div class="icon">
+          <ul>
+            <li>
+              <a href="#"
+                ><img
+                  src="./image/btn/ico_sns_naver_39.png"
+                  style="
+                    width: 39px;
+                    height: 39px;
+                    margin-left: 3px;
+                    margin-top: 20px;
+                  "
+              /></a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="./image/btn/ico_sns_ssg_48.png"
+                  style="
+                    width: 48px;
+                    height: 18px;
+                    margin-left: 3px;
+                    margin-top: 31px;
+                  "
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./image/btn/ico_sns_youtube_45.png"
+                  style="
+                    width: 45px;
+                    height: 30px;
+                    margin-left: 3px;
+                    margin-top: 25px;
+                  "
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./image/btn/ico_sns_instagram_45.png"
+                  style="
+                    width: 45px;
+                    height: 45px;
+                    margin-left: 2px;
+                    margin-top: 17px;
+                  "
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <div class="footer2">
+          <a href="#"
+            ><img src="./image/logo/logo_w_2892.png" alt="SHINSAGAE FOOD"
+          /></a>
+          <ul class="ft2">
+            <li><a href="#">법적 고지</a></li>
+            <li id="white"><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">영상정보처리기기 운영 관리 방침</a></li>
+            <li><a href="#">이메일주소 무단수집 거부</a></li>
+          </ul>
+          <div class="button1">
+            <a href="#none" onclick="return false" id="rlrlrl">FAMLIY SITE</a>
+            <div class="listbox">
+              <ul class="ft3">
+                <li>
+                  <a href="#">신세계그룹</a>
+                </li>
+                <li>
+                  <a href="#">신세계푸드 </a>
+                </li>
+                <span>Retail</span>
+                <li>
+                  <a href="#">신세계백화점</a>
+                </li>
+                <li>
+                  <a href="#">이마트</a>
+                </li>
+                <li>
+                  <a href="#">이마트 트레이더스</a>
+                </li>
+                <li>
+                  <a href="#">이마트 에브리데이</a>
+                </li>
+                <li>
+                  <a href="#">이마트24</a>
+                </li>
+                <li>
+                  <a href="#">신세계TV쇼핑</a>
+                </li>
+                <li>
+                  <a href="#">프리미엄 아울렛</a>
+                </li>
+                <li>
+                  <a href="#">스타필드</a>
+                </li>
+                <li>
+                  <a href="#">신세계 면세점</a>
+                </li>
+                <li>
+                  <a href="#">신세계 인터네셔날</a>
+                </li>
+                <span>food</span>
+                <li>
+                  <a href="#">신세계 L&B</a>
+                </li>
+                <li>
+                  <a href="#">스타벅스 코리아</a>
+                </li>
+                <span>LEISURE</span>
+                <li>
+                  <a href="#">조선호텔리조트</a>
+                </li>
+                <span>INFRASTRUCTURE</span>
+                <li>
+                  <a href="#">신세계 건설</a>
+                </li>
+                <li>
+                  <a href="#">신세계 아이엔씨</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <p id="top"><a href="#header_inner">TOP</a></p>
+    </div>
+    <!--메뉴바-->
+    <div id="menu3">
+      <div id="menu">
+        <div>
+          <ul>
+            <li>
+              <img src="./image/logoo.png" alt="shinsegae food 로고" />
+              <a href="#">Site Map</a>
+            </li>
+          </ul>
+          <div class="ebox">
+            <ul>
+              <li>
+                <img src="./image/btn_mobile_gnb_close2.png" alt="나가기버튼" />
+                <a href="#"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <!--deapth메뉴-->
+
+      <div id="menu1">
+        <nav>
+          <ul>
+            <li>
+              <a href="../sub1/shinsaegae_1page.html">COMPANY</a>
+              <div class="dtest">
+                <ul>
+                  <li><a href="#">STORY</a></li>
+                  <li><a href="#">-VISION</a></li>
+                  <li><a href="#">-History</a></li>
+                  <li><a href="#">-Contact Us</a></li>
+                  <li class="a"><a href="#">PR</a></li>
+                  <li><a href="#">-뉴스</a></li>
+                  <li><a href="#">-홍보영상</a></li>
+                  <li class="a"><a href="#">IR</a></li>
+                  <li><a href="#">-경영정보</a></li>
+                  <li><a href="#">-재무정보</a></li>
+                  <li><a href="#">-주식정보</a></li>
+                  <li><a href="#">-공시 및 공고</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <a href="../sub2/shinsaegae_2page.html">BUSINESS</a>
+              <div class="dtest">
+                <ul>
+                  <li><a href="#">식품제조/유통</a></li>
+                  <li><a href="#">푸드서비스</a></li>
+                  <li><a href="#">프리미엄다이닝</a></li>
+                  <li><a href="#">베이커리</a></li>
+                  <li><a href="#">프랜차이즈</a></li>
+                  <li><a href="#">자회사</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <a href="../sub3/shinsaegae_3page.html">ESG</a>
+              <div class="dtest">
+                <ul>
+                  <li><a href="#">가치세계</a></li>
+                  <li><a href="#">친환경 경영</a></li>
+                  <li><a href="#">품질/안전 경영</a></li>
+                  <li><a href="#">투명경영</a></li>
+                  <li><a href="#">상생경영</a></li>
+                  <li><a href="#">사회공헌</a></li>
+                  <li><a href="#">ESG 정보</a></li>
+                  <li><a href="#">신문고</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <a href="../sub4/shinsaegae_4page.html">고객지원</a>
+              <div class="dtest">
+                <ul class="c">
+                  <li><a href="#">고객의소리</a></li>
+                  <li class="b">
+                    <a href="#">외식브랜드 가맹 및<br />입점문의</a>
+                  </li>
+                  <li><a href="#">위탁급식상담</a></li>
+                  <li><a href="#">식자재구매상담</a></li>
+                  <li><a href="#">식자재납품상담</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <a href="../sub5/shinsaegae_5page.html">채용</a>
+              <div class="dtest">
+                <ul>
+                  <li><a href="#">인재상</a></li>
+                  <li><a href="#">인사제도</a></li>
+                  <li><a href="#">복리후생</a></li>
+                  <li><a href="#">직무소개</a></li>
+                  <li><a href="#">채용 프로세스</a></li>
+                  <li><a href="#">채용공고</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>

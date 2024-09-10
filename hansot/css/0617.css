@@ -1,0 +1,47 @@
+@charset "utf-8";
+/*초기화*/
+div,body,header,article,section,footer,hr,h1,h2,h3,ul,li,img{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+.hidden{display: none;}
+br{border: none;}
+a{text-decoration: none;}
+/*유틸메뉴*/
+div#util_menu_area{width: 1173px; height:29px; background-color: aqua; margin: 0 auto ; z-index: 3; position: absolute; left:374px;}
+div#util_menu_area > div > ul {float: right;}
+div#util_menu_area > div > ul li {float: left; margin-right: 28px; }
+
+/*헤더영역*/
+header{width: 1173px; height: 92px; background-color: aquamarine; margin: 0 auto;  z-index: 1; position: absolute; left: 374px; top: 29px;}
+
+
+/*비주얼영역*/
+article{height: 650px; background:url(../images/main_visual6.jpg) no-repeat; z-index: 0; position: relative }
+
+/*컨텐츠영역*/
+section > div.con1 {width: 1173px;height: 1027px; background-color: beige; margin: 61px auto;}
+section > div.con1 > ul li{float: left; width: 370px; height: 441px; background-color: blue; margin-right: 25px; }
+section > div.con1 > ul li:nth-child(1) {width: 574px; height: 526px; margin-bottom: 62px; }
+section > div.con1 > ul li:nth-child(2){width: 574px; height:526px; margin-right: 0; margin-bottom: 62px;}
+section > div.con1 > ul li:nth-child(3) {margin-right: 31.5px;}
+section > div.con1 > ul li:nth-child(4) {margin-right: 31.5px;}
+section > div.con1 > ul li:nth-child(5){margin-right: 0;}
+
+section > div.con2 {height: 600px;background: url(../images/main_visual_02.jpg)no-repeat;}
+section > div.con2 > div.block {width: 370px; height: 600px; background-color: black; opacity: 70%; margin-left:366px;}
+section > div.con2 > div.block > ul li{float: left; color: #fff; }
+section > div.con2 > div.block > ul li:nth-child(1) {font-size: 32px; margin-top: 85px; margin-left: 28px; margin-bottom: 38px; font-weight: bold; }
+section > div.con2 > div.block > ul hr {height: 5px;  background-color: #fff;}
+section > div.con2 > div.block > ul li:nth-child(3) {margin-left: 28px; font-size: 12px;}
+section > div.con2 > div.block > ul li:nth-child(4) {border-style: solid; padding: 25px 40px; margin-left: 28px; margin-top: 110px; font-size: 13px; font-weight: bold;}
+
+section > div.con3 {height: 632px; width: 1173px; margin: 62px auto 100px; background-color: aquamarine;}
+section > div.con3 > ul {float: left;}
+section > div.con3 > ul li:nth-child(1) {width: 803px; height: 450px; background-image: url(../images/main_img_05.jpg); float: left; margin-bottom: 103px;}
+section > div.con3 > ul li:nth-child(2) {width: 370px; height: 450px; background-color: beige; float: left; margin-bottom: 103px;}
+section > div.con3 > ul li:nth-child(3) {float: left; width: 143px; height: 22px; margin-bottom: 60px;}
+section > div.con3 > ul hr {width: 1007px; height: 20px; background-color: #000; float: right; margin: 0 0 60px 0;}
+
+section > div.con4 {width: 1173px; height: 269px; background-color: blueviolet; margin: 0 auto;}
+section > div.con4 > ul {float: left;}
+section > div.con4 > ul li{float: left; width: 370px; height: 269px; background-color: chartreuse; margin-right: 31.5px;}
+section > div.con4 > ul li:last-child{margin-right: 0;}

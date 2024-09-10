@@ -1,0 +1,150 @@
+@charset "utf-8";
+/* 초기화 */
+*{box-sizing: border-box;}
+body,div,header,article,section,h1,h2,h3,nav,ul,li,img,hr,p{margin: 0; padding: 0;}
+body{font: normal 14px/1.2 "맑은 고딕", sans-serif; text-transform: uppercase;}
+img, hr{border: none;}
+ul,li{list-style: none;}
+.hidden{display: none;}
+a{text-decoration: none; color: #fff; font-weight: bold;}
+
+/* 해더영역 */
+div#header_area{width: 1170px; height: 120px; position: absolute; left: 50%; margin-left: -585px; z-index: 9999;}
+div#header_area > div.util_menu{overflow: hidden;}
+div#header_area > div.util_menu ul{float: right; height: 14px; line-height: 14px; margin-top: 9px; margin-bottom: 6px; margin-right: 10px; font-size: 10px;}
+div#header_area > div.util_menu li{float: left; padding: 0 14px; position: relative;}
+div#header_area > div.util_menu li a{color: #fff;}
+div#header_area > div.util_menu li::after{content:""; display: block; width: 1px; height: 10px; background-color: #fff; position: absolute; right:0; top: 2px;}
+div#header_area > div.util_menu li:last-child{text-indent: -9999px;}
+div#header_area > div.util_menu li:last-child::after{background: none;}
+div#header_area > div.util_menu li:last-child a{float: left; background-repeat: no-repeat; background-size: 400% 100%;}
+div#header_area > div.util_menu li:last-child a:nth-child(1){width: 14px; height: 14px; margin-right: 10px; background-image: url(../images/icon_sns_01.png); background-position: 68% 0;}
+div#header_area > div.util_menu li:last-child a:nth-child(2){width: 9px; height: 14px; background-image: url(../images/icon_sns_01.png); background-position: left 99% top 0%;}
+
+div#header_area > header{height: 90px; background: #fff; padding: 22px 30px; box-sizing: border-box;}
+div#header_area > header h1{float: left;}
+div#header_area > header h1 img{float: left;}
+div#header_area > header nav{float: right; margin-top:18px;}
+div#header_area > header nav li{float: left; margin-right: 60px; position: relative;}
+div#header_area > header nav li a{color: #000;}
+div#header_area > header nav li:hover a{color: #f2c000;}
+div#header_area > header nav li::after{content: ""; display: block;width: 100%; height: 3px; background-color:#f2c000; position: absolute; bottom: -30px; transition: all 0.5s; transform: scale(0,1);}
+div#header_area > header nav li:hover::after{transform: scale(1,1);}
+
+/* 비주얼영역 */
+article{width: 100%; height: 650px; margin-bottom:60px; text-indent: -9999px; font-size: 0; overflow: hidden;}
+article div.slide{width: 100%; height: 100%; position: relative; overflow: hidden;}
+article div.slide li{width: 100%; height: 100%; position: absolute; background-size: cover;}
+article div.slide li a{width: 100%; height: 100%;}
+
+article div.slide li:nth-child(1){background-image: url(../images/main_visual1.jpg);}
+article div.slide li:nth-child(2){background-image: url(../images/main_visual2.jpg); left: 100%;}
+article div.slide li:nth-child(3){background-image: url(../images/main_visual3.jpg); left: 200%;}
+article div.slide li:nth-child(4){background-image: url(../images/main_visual4.jpg); left: 300%;}
+article div.slide li:nth-child(5){background-image: url(../images/main_visual5.jpg); left: 400%;}
+article div.slide li:nth-child(6){background-image: url(../images/main_visual6.jpg); left: 500%;}
+article div.slide li:nth-child(7){background-image: url(../images/main_visual7.jpg); left: 600%;}
+article div.slide li:nth-child(8){background-image: url(../images/main_visual8.jpg); left: 700%;}
+article div.slide li:nth-child(9){background-image: url(../images/main_visual9.jpg); left: 800%;}
+
+article div.paging{width: 1170px; height: 30px; position: absolute; top:570px; left:50%; margin-left: -585px;}
+article div.paging ul{float: left; margin-right: 26px; margin-top: 13px;}
+article div.paging li{float: left; width: 50px; height: 4px; margin-right: 4px; background-color:#cfc6bc;}
+article div.paging span{float: left; width: 30px; height: 30px; background: url(../images/icon_play.png)no-repeat; background-size: 200% 100%;}
+article div.paging li.on{background-color: #dfb206;}
+
+/* 컨텐츠영역 */
+section{margin-bottom: 100px;}
+section > div#contents1 {width: 1170px; height: 1024px; margin: 0 auto 55px; }
+section > div#contents1 li {float: left; position: relative; } 
+section > div#contents1 li img{width: 100%; position: absolute;}
+section > div#contents1 li div { width: 100%; position: absolute; background-color:#eeecec} 
+section > div#contents1 li div.text_area{bottom: 6px;padding: 30px 26px; }
+section > div#contents1 li div.bar_area{ height: 6px; bottom: 0; background-color:#000;} 
+section > div#contents1 li div.bar_area span{display: block; width: 100%; height: 100%; background-color: #f6ca00; transform: scale(0,1); transition: all 0.5s;} 
+section > div#contents1 li:hover div.bar_area span{transform: scale(1,1);} 
+section > div#contents1 li strong{font-size: 21px; line-height: 34px;}
+section > div#contents1 li h3{position: absolute; bottom: 25px; font-weight: normal; font-size:12px;line-height: 20px; } 
+section > div#contents1 li h3::before{content:""; width: 20px; height: 20px; background: url(../images/btn_link.png); float: left; margin-right: 5px; background-size: 200% 100%; transition: all 0.5s;}
+section > div#contents1 li:hover h3::before {background-position: 100% 0;}
+section > div#contents1 li a {display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0;}
+section > div#contents1 li:nth-child(1){width: 570px; height: 524px; margin-bottom: 60px; background-color: #b12c2c;} 
+section > div#contents1 li:nth-child(1) div.text_area{height: 164px; } 
+section > div#contents1 li:nth-child(2){width: 570px; height: 524px; float: right;margin-bottom: 60px; background-color: #454545;}
+section > div#contents1 li:nth-child(2) div.text_area{height: 164px;}
+section > div#contents1 li:nth-child(3){width: 370px; height: 440px; margin-right: 30px; padding: 52px 32px; background-color: #f6ca00;}
+section > div#contents1 li:nth-child(3) strong{font-size: 34px; line-height: 46 px;} 
+section > div#contents1 li:nth-child(3) hr{width: 40px; height: 4px; background-color: #000; margin: 40px 0 21px;}
+section > div#contents1 li:nth-child(3) p{font-size: 12px; line-height: 24px;} 
+section > div#contents1 li:nth-child(4){width: 370px;height: 440px; background-color: aqua;} 
+section > div#contents1 li:nth-child(4) div.text_area{height: 204px;} 
+section > div#contents1 li:nth-child(5){width: 370px;height: 440px;float: right; background-color: antiquewhite;} 
+section > div#contents1 li:nth-child(5) div.text_area{height: 204px;}
+
+/* #contents2 */
+section > div#contents2{height: 600px; background: url(../images/main_visual_02.jpg)no-repeat; margin: 0 auto 60px;}
+section > div#contents2 > div.block {width: 370px; height: 600px; background-color: #000; opacity: 80%; margin-left:366px;}
+section > div#contents2 > div.block {float: left; color: #fff; }
+section > div#contents2 > div.block > ul li a{color: #fff; }
+section > div#contents2 > div.block > strong {font-size: 32px; margin-top: 85px; margin-left: 28px; margin-bottom: 38px; font-weight: bold; float: left;}
+section > div#contents2 > div.block > hr {border: 3px #fff solid; width: 50px; margin-left: 28px; display: block; float: left;}
+section > div#contents2 > div.block > p {margin-left: 28px; font-size: 12px; float: left; margin-top: 24px; line-height: 30px;}
+section > div#contents2 > div.block > a {border:2px #fff solid; padding: 20px 40px; margin-left: 28px; margin-top: 80px; font-size: 14px; display: inline-block; box-sizing: border-box; transition: 0.5s; cursor: pointer; color: #fff;}
+section > div#contents2 > div.block > a:hover{ color: #000; background-color: #fff;}
+
+/* #contents */
+section > div#contents3{width: 1170px; height: 900px; margin: 0 auto; }
+section > div#contents3 div.text_box_area{width: 1170px; height: 440px; background: url(../images/main_img_05.jpg) no-repeat;
+position: relative;}
+section > div#contents3 div.text_box_area div.text_box{float: right; width: 370px;height: 440px; padding: 50px 30px; background-color: #eeecec; color: #000; font-size: 12px; line-height: 24px; position: relative; }
+section > div#contents3 div.text_box_area div.text_box strong{font-size: 34px; line-height: 46px;} 
+section > div#contents3 div.text_box_area div.text_box hr + p{margin-bottom: 57px;}
+section > div#contents3 div.text_box_area div.text_box hr{width: 40px; height: 4px; background-color: #000000; margin: 40px 0
+21px;}
+section > div#contents3 div.text_box_area div.text_box p.btn{position: absolute; bottom: 25px; font-weight: normal;
+font-size: 12px;line-height: 20px; } 
+section > div#contents3 div.text_box_area div.text_box p.btn::before{content:""; width : 20px; height: 20px; background: url(../images/btn_link.png); float: left; margin-right: 5px; background-size: 200% 100%; transition: all 0.5s;} 
+section > div#contents3 div.text_box_area:hover div.text_box p.btn::before{background-position: 100% 0;} 
+section > div#contents3 div.text_box_area div.text_box div.bar_area{width: 100%; height: 6px;bottom: 0; background-color:
+•#000; position: absolute; left:0}
+section > div#contents3 div.text_box_area div.text_box div.bar_area span{display: block; width: 100%; height: 100%; background-color: #f6ca00; transform: scale(0,1); transition: all 0.5s;} 
+section > div#contents3 div.text_box_area:hover div.text_box div.bar_area span{transform: scale(1,1);} 
+section > div#contents3 div.text_box_area a{display: block;width: 100%; height: 100%; position: absolute;}
+
+section > div#contents3 div.more_title{height:22px; margin: 100px 0;}
+section > div#contents3 div.more_title h3{float: left; width: 136px; font-size: 20px; line-height: 22px; letter-spacing: -0,
+1em;}
+section > div#contents3 div.more_title hr{width: 1000px; height: 18px; background-color: #000; float: right; margin-top: 2px;} 
+section > div#contents3 div.event{height: 266px;}
+section > div#contents3 div.event li{width: 370px; height: 266px; float: left; margin-right: 30px; position: relative;
+background-size: 100%; }
+section > div#contents3 div.event li:nth-child(1) {background: url(../images/more_hansot.jpg) ;background-size: 100%; } 
+section > div#contents3 div.event li:nth-child(2) {background: url(../images/more_event.jpg);background-size: 100%; } 
+section > div#contents3 div.event li:nth-child(3) {background: url(../images/more_news.jpg);background-size: 100%;
+margin-right: 0;}
+section > div#contents div.event li a{display: block; height: 100%; color:#fff; font-weight: bold; font-size: 12px; } 
+section > div#contents3 div.event li p{width: 100%; height: 60px; background-color: #373737;position: absolute; bottom: 0;
+line-height: 60px; text-indent: 30px; }
+section > div#contents3 div.event li p::after {content: ""; background:url(../images/icon_cont_more.png); float: right; width:6px; height: 11px; background-size: 200% 100%;margin-top:25px ; margin-right: 30px;} 
+section > div#contents3 div.event li:hover a{color: #f2c000;} 
+section > div#contents3 div.event li:hover p::after{background-position: 100% 0;}
+
+/* 푸터영역 */
+div#footer_area {height: 310px; background-color: #f2c000;}
+div#footer_area footer{width: 1170px; height: 100%; text-align: center; margin: 0 auto; color: #333326;}
+div#footer_area footer a {color: #333326;}
+div#footer_area footer > p:nth-child(2){padding:47px 0 27px;}
+div#footer_area footer > p:nth-child(2) a {display: inline-block; padding: 0 6px; font-weight: normal; color: #333326;}
+div#footer_area footer > p:nth-child(2) a:after{content: ""; display: inline-block; width:1px; height: 14px; background-color: #333326; margin-left: 14px;}
+div#footer_area footer > p:nth-child(2) a:last-child::after{background: none;}
+div#footer_area footer > p:nth-child(2)::after{content: ""; float: right; width: 174px; height: 60px; background: url(../images/logo_webaward2017.png); margin-top: -30px;}
+div#footer_area footer > hr {height: 1px; background: #dfb206; margin-bottom: 28px;}
+div#footer_area footer address {font-style: normal; font-size: 12px; line-height: 26px; margin-bottom: 20px;}
+div#footer_area footer address span::after{content: ""; display: inline-block; width: 1px; height: 9px; background-color: #333326; margin-left: 13px; margin-right: 13px;}
+div#footer_area footer address span:last-child:after{background: none;}
+div#footer_area footer small {display: block; margin-bottom: 20px;}
+div#footer_area footer div{width: 94px; height: 40px; margin: 0 auto; text-indent: -9999px;}
+div#footer_area footer div li {width: 40px; height: 40px; float: left; background-image: url(../images/icon_sns_02.png); background-repeat: no-repeat; background-size: 200% 100%;}
+div#footer_area footer div li:last-child{float: right; background-position: 100% 0;}
+div#footer_area footer li a{display: block; width: 100%; height: 100%;}
+

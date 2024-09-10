@@ -1,0 +1,503 @@
+@charset "UTF-8";
+/* 초기화 */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li,ul{list-style: none;}
+table,th,td,tr{
+    border-collapse: collapse;
+}
+a{text-decoration: none; color: aliceblue; font-family: "Hahmlet", serif;}
+button, select{border: none;}
+
+/*기본값이 (디스플레이인라인) 요소이기 때문에 변경 
+필요하다면 다스플레이변경후 사용*/
+img, video, svg{display: block; border: none;}
+
+html, body{width: 100vw;}
+
+body{
+    font-family: "Hahmlet", serif;  
+}
+body{
+    margin-top: 80px !important
+}
+
+/* ( 크롬, 사파리, 오페라, 엣지 ) 스크롤바 none*/
+::-webkit-scrollbar{
+    display: none;
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+} 
+
+/* 마우스 커서 모양 변경 */
+body{
+    font-family: 'lol'; 
+    cursor: url(https://brand.riotgames.com/images/league-of-legends/cursor.png), auto; 
+}
+a, li, button, label[role="button"] {cursor: url(https://brand.riotgames.com/images/league-of-legends/cursor-pointer.png), auto;}
+
+
+/* 헤더 부분 */
+header{
+    height: 80px;
+    width: 100%;
+    background-color: #010A13;
+    border-bottom: 3px solid #C89B3C;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+}
+header div.header{
+    width: 93.75%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 리그오브레전드 로고 */
+
+svg#LOL_logo{
+    height: 60px;
+}
+
+/* 메뉴부분 */
+header div.header>nav{
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+header div.header>nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+header div.header nav ul li{
+    width: 14.2857%;
+
+    float: left;
+    position: relative;
+}
+header div.header>nav ul li a{
+    font-size: clamp(11px, 1vw, 16px);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header div.header>nav ul li a:hover{
+    font-weight: bold;
+    color: #C89B3C;
+}
+
+header div.header nav div.subMenu{
+    position: absolute;
+    width: 100%;
+    height: 27vw;
+    z-index: 999;
+}
+header div.header>nav div.subMenu>ul{
+    height: 100%;
+}
+header div.header>nav div.subMenu>ul>li{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header div.header>nav div.subMenu>ul>li>a{
+    height: auto;
+    width: 100%;
+    position: relative;
+    padding: 10% 0;
+}
+header div.header>nav div.subMenu>ul>li>a::after{
+    content: ""; 
+    display: block; 
+    width: 80%; 
+    height: 3px; 
+    background-color: #C89B3C; 
+    position: absolute;  
+    transition: all 0.5s; 
+    transform: scale(0,1);
+    bottom: 3%;
+    border-radius: 2px;
+}
+header div.header>nav div.subMenu>ul>li>a:hover::after{
+    transform: scale(1,1);
+}
+
+header div.subMenuBackground{
+    background: linear-gradient(#091428, #0A1428);
+    opacity: 60%;
+    width: 100%;
+    height: 27vw;
+    display: block;
+    position: absolute;
+    z-index: -55;
+    border-bottom: 3px solid #C89B3C;
+}
+
+
+/* 헤더 우측부분 */
+header div.headright{
+    width: 22%;
+    min-width: 340px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 라이엇로고 */
+header div.headright svg#Riot_logo{
+    width: 106.67px;
+    height: 30px;
+    display: block;
+    fill: #fff;
+}
+header div.headright a.Riot_logo:hover svg#Riot_logo{
+    fill: red;
+}
+
+/* 이슈 박스 */
+header div.headright span.issuebox>a{
+    height: 30px;
+    width: 30px;
+    display: block;
+    background:url(../image/IssueX.png) no-repeat center 
+    /* background:url(../image/IssueO.png) no-repeat center; <--이슈발생시 */
+}
+
+/* 언어 선택 박스 */
+.selectBox2 {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    background-color: #3C3C41;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.selectBox2:after {
+    content: url(../image/underarrow.png);
+    display: block;
+    line-height: 4px;
+    margin-right: 10px;
+}
+
+.selectBox2 .label {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    width: inherit;
+    height: inherit;
+    border: 0 none;
+    outline: 0 none;
+    padding-left: 15px;
+    background: transparent;
+    text-align: center;
+    font-weight: bold;
+}
+
+.selectBox2 .optionList {
+    position: absolute; 
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    color: #080808;
+    padding: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    max-height: 0;
+    transition: .3s ease-in;
+}
+
+.selectBox2.active .optionList {
+    max-height: 500px;
+}
+
+.selectBox2 .optionItem {
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 5px 15px 5px;
+    transition: .1s;
+}
+
+.selectBox2 .optionItem:hover {
+    background: rgb(50, 140, 243);
+}
+
+.selectBox2 .optionItem:last-child {
+    border-bottom: 0 none;
+}
+
+ /* 헤더 로그인 */
+header a#login{
+    display: block;
+    min-width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    background: linear-gradient(#0AC8B9, #005A82);
+    text-align: center;
+    line-height: 30px;
+}
+
+
+/* 모바일 메뉴 */
+.slide-open{
+    position:relative;
+    width:50px;
+    height:50px;
+    cursor:pointer;
+    display: none;
+  }
+  .burgur{
+  right: 15px;
+  top: 23px;
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #C89B3C;
+  }
+  .burgur .top-line{
+  width: 20px;
+  height: 2px;
+  background-color: #C89B3C;
+  bottom: -5px;
+  content: '';
+  position: absolute;
+  right: 0;
+  -webkit-transition:  -webkit-transform .3s;
+  transition: transform .3s;
+  
+  }
+  .burgur .bot-line {
+  width: 20px;
+  height: 2px;
+  background-color: #C89B3C;
+  top: -5px;
+  content: '';
+  position: absolute;
+  right: 0;
+  -webkit-transition:  -webkit-transform .3s;
+  transition: transform .3s;
+  }
+  
+  .burgur.on {
+  width: 0;
+  }
+  .burgur.on .bot-line {
+  -webkit-transform: translateY(5px) rotate(135deg);
+  transform: translateY(5px) rotate(135deg);
+  }
+  .burgur.on .top-line{
+  -webkit-transform: translateY(-5px) rotate(-135deg);
+  transform: translateY(-5px) rotate(-135deg);
+  }
+div#mobileHeader{
+    display: none;
+    width: 70vw;
+    height: 100vw;
+    background-color: #0A1428;
+    opacity: 60%;
+    float: right;
+    border-left: 3px solid #C89B3C;
+}
+
+
+body{
+    background-color: #000;
+}
+
+/* window */
+    article{
+        height: 100vh;
+        position: relative;
+    }
+
+    .text{
+        display: flex;
+        justify-content: space-between;
+        width: 68%;
+        margin: 0 auto;
+        margin-top: 7%;
+    }
+    .text strong{
+        color: #C89B3C;
+        font-size: calc(10px + 1vw + 5px);
+    }
+    .text ul{
+        float: right;
+    }
+    .text ul li:nth-child(1){
+        backdrop-filter:blur(30px);
+        box-shadow: 0 0 20px rgb(63, 62, 62);
+    }
+
+    .text ul li:nth-child(2){
+        opacity: 0.2;
+    }
+    .text ul li{
+        float: left;
+        margin-right: 20px;
+        border: 1px solid #C89B3C;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    .text ul li a{ 
+        color:#F0E6D2 ;
+        cursor: pointer;
+    }
+    table{
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 1%;
+    }
+    thead{
+        font-size:1.7rem;
+        
+    }
+    tbody{
+        font-size:1.2rem
+    }
+    tr{
+        color: #F0E6D2;
+        text-align: center;
+    }
+    th,td{
+        /* border: 1px solid #C89B3C; */
+        border: 1px solid #C89B3C;
+        padding: 28px 5px;
+    }
+    
+
+
+
+
+/* 미디어 쿼리 */
+    /* 모바일 분기점 전 처리 */
+@media screen and (max-width:1279px){
+    header div.headright{
+        transform: scale(0.8);
+    }
+    article{
+        height: 260vh;
+    }
+    .down_box{
+        display: none;
+    }
+}
+    
+
+
+
+    /* 모바일 화면 미디어쿼리 */
+@media screen and (max-width:1023px){
+    /* 모바일 헤더 */
+    header div.headright{
+        display: none;
+    }
+    header div.header nav{
+        display: none;
+    }
+    .slide-open{
+        display: block;
+    }
+    svg#LOL_logo{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    article{
+        height: 220vh;
+    }
+    .tittle_box{
+        height: 70%;
+    }
+    .img2_box img{
+        width: 190px;
+    }
+    .img_box img{
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
+    .img_box li{
+        font-size: 0.8em;
+    }
+    .ineer_box4 strong{
+        font-size: 1.2rem;
+    }
+    .ineer_box4 li{
+        font-size: 1rem;
+    }
+    .ineer_box3 p, .ineer_box2 p, .ineer_box1 p{
+        font-size: 1rem;
+    }
+    .ineer_box1 li{
+        font-size: 0.9rem;
+        line-height: 1.8rem;
+    }
+    .ineer_box1 i{
+        display: none;
+    }
+    .text strong{
+        display: none;
+    }
+    .text ul{
+        margin: 0 auto;
+        padding: 20px 20px;  
+    }
+    .text ul li{
+        padding: 10px 20px;
+        margin-right: 30px;
+    }
+    thead{
+        font-size: 17px;
+    }
+    tbody{
+        font-size: 15px;
+    }
+    table{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    .ineer_box1 i{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:640px) {
+    .text strong{
+        display: none;
+    }
+    .text ul{
+        margin: 0 auto;
+        padding: 20px 20px;
+        
+    }
+    .text ul li{
+        padding: 10px 20px;
+        margin-right: 20px;
+    }
+    .text ul li a{
+        font-size: 0.7em;
+    }
+    thead{
+        font-size: 15px;
+    }
+    tbody{
+        font-size: 13px;
+    }
+    table{
+        width: 90%;
+    }
+}
+
+/* 처리 */
+

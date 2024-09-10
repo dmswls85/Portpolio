@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/mobile.css" />
+    <!--구글 폰트-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dongle&family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--JS-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ 
+    <script src="../js/mobile.js"></script>
+    </script>
+
+    <title>PORTPOLIO</title>
+
+     <!-- 풀 페이지 -->
+     <link rel="stylesheet" type="text/css" href="../css/fullpage.css" />
+     <style>
+         /* Backgrounds will cover all the section
+         * --------------------------------------- */
+         #section0,
+         #section1,
+         #section2,
+         #section3,
+         #section4,
+         #section5,
+         #slide1,
+         #slide2{
+             background-size: cover;
+             background-position: center;
+             background-attachment: fixed;
+             position: relative;
+         }
+         /* Defining each sectino background and styles
+         * --------------------------------------- */
+     </style>
+     <!--[if IE]>
+         <script type="text/javascript">
+                 var console = { log: function() {} };
+         </script>
+     <![endif]-->
+  </head>
+  <body>
+   
+    <div id="fullpage">
+      <div class="section " id="section0">
+    <!--home-->
+    <section id="home">
+      <svg class="canvas" viewBox="0 0 150 150"></svg>
+      <nav class="nav1">
+        <h3 class="hidden">gnb 영역</h3>
+        <ul>
+          <li class="home_button"><a href="#home">HOME</a></li>
+          <li class="profile_button"><a href="#profile">PROFILE</a></li>
+          <li class="skill_button"><a href="#skill">SKILL</a></li>
+          <li class="portpolio_web_button"><a href="#portpolio_web">PORTPOLIO</a></li>
+          <li class="contact_button"><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+      <nav class="nav2">
+        <div class="navcircle"><a href="#home"></a></div>
+        <div class="navcircle2"><a href="#profile"></a></div>
+        <div class="navcircle3"><a href="#skill"></a></div>
+        <div class="navcircle4"><a href="#portpolio_web"></a></div>
+        <div class="navcircle5"><a href="#contact"></a></div>
+      </nav> 
+      <h1>
+        <a href="#"><img src="./images/logo.png" /></a>
+      </h1>
+      <h2>Passionate<br/> Web Publisher</h2>
+      <strong
+        >깔끔한 코드와 멋진 디자인으로 <br/>웹을 만들어가는
+        것을 목표로 합니다.<br />사용하기 쉬운 인터페이스와 <br/>기억에 남는 경험을
+        만드는 데 <br />집중하고 있으며, 좋아하는 일을 하면서 <br/>매일 배우고
+        있습니다.</strong
+      >
+      <div class="line"></div>
+      <small class="width">Mobile 해상도 : max-width 1023 적응형 퍼블리싱</small>
+
+ 
+    </section>
+    </div>
+       <script type="module">
+      import { SVG } from "https://cdn.skypack.dev/@svgdotjs/svg.js";
+import { gsap } from "https://cdn.skypack.dev/gsap@3.6.0";
+
+const svg = SVG(".canvas");
+const circles = [];
+
+generate();
+
+function generate() {
+  svg.clear();
+
+  // create 20 circles that animate to a random x, y, scale, and fill
+  for (let i = 0; i < 20; i++) {
+    const circle = svg.circle(30).cx(0).cy(0).fill("hsl(0, 100%, 100%")
+      .node;
+
+    // animate the circle element to a random position on the canvas, with a random fill color and scale value
+    gsap.to(circle, {
+      x: "random(0, 200, true)",
+      y: "random(0, 500, true)",
+      scale: "random(0.5, 1, true)",
+      ease: "elastic.out(1, 0.5)",
+      duration: 1.5,
+      delay: "random(0, 0.2, true)",
+      attr: {
+        fill: () => `hsl(${gsap.utils.random(0, 360)}, 75%, 75%)`
+      },
+      repeat: -1,
+      repeatDelay: 1.5,
+      repeatRefresh: true
+    });
+  }
+}
+    </script>
+    <!--profile-->
+    <div class="section " id="section1">
+    <section id="profile">
+      <div class="txt_animate">
+      <h2 class="menu_profile"><span>#</span><span>P</span><span>R</span><span>O</span><span>F</span><span>I</span><span>L</span><span>E</span</h2>
+    </div>
+      <div class="arrow"></div>
+      <div class="line4"></div>
+      <div class="about_profile"><img src="../images/profile.jpg" /></div>
+      <div class="box"></div>
+      <h2>
+        작은 디테일도 놓치지 않는<br />❛
+        <span class="name">Web Publisher 임은진</span> ❜ 입니다.
+      </h2>
+      <div class="line5"></div>
+      <div class="about_intro">
+        <dl>
+          <dt>name</dt>
+          <dd>임은진</dd>
+          <dt>tel</dt>
+          <dd>010-6378-2640</dd>
+          <dt>date</dt>
+          <dd>2000.08.05</dd>
+          <dt>mail</dt>
+          <dd>eunni0805@naver.com</dd>
+          <dt>education</dt>
+          <dd>
+            2024. 04. 24 ~ 2024. 09. 19<br />
+            그린 컴퓨터 학원 UI/UX (760시간)<br />
+            반응형 웹 디자인 & 웹 퍼블리셔 수료 예정
+          </dd>
+        </dl>
+      </div>
+    </section>
+  </div>
+
+<!--skill-->
+<div class="section " id="section2">
+    <section id="skill">
+      <div class="txt_animate">
+      <h2 class="menu_profile">#SKILLS</h2></div>
+      <div class="arrow"></div>
+      <ul>
+        <li>
+          <p class="skill_text">HTML</p>
+          <p>마크업 랭귀지를 준수하여 홈페이지를 구조적으로 작성하는 방법을 배웠으며,
+            웹 표준성과 웹 접근성을 준수하여 완성할 수 있습니다.</p></li>
+        <li><p class="skill_text">CSS</p> 구조적 선택자를 활용하여 중첩되는 클래스와 지정된 아이디를 적절히 활용하여 반복적인 코딩을 줄였습니다.flex를 통해
+          반응형 홈페이지를 보다 효율적으로 만들 수 있습니다.</p></li>
+        <li><p class="skill_text">JavaScript</p><p>jquery를 배우기 위한 단계의 필수적인 지식과
+          function의 응용 및 구조를 배워 코딩의 핵심 구조를 배웠습니다.
+          웹페이지 동작에 필요한 스크립트 언어를 작성할 수 있습니다.</p></li>
+        <li><p class="skill_text">Jquery</p><p>html과 css를 응용하여 쉽고 간단한 jquery를 사용해
+          효과적인 기능을 만드는 것을 배웠습니다.
+          오픈 소스의 활용과 사용자의 이벤트에 따른 동작에 필요한 기능을 구현합니다.</p></li>
+        <li><p class="skill_text">Git</p><p>프로젝트 관리와 협업을 효율적으로 할 수 있습니다.</p></li>
+        <li><p class="skill_text">PS</p><p>사진 보정 및 상세 페이지 등의 디자인 작업을 진행합니다. </p></li>
+        <li><p class="skill_text">Ai</p><p>팝업, 로고, 배너, 아이콘, 벡터 이미지와 같은 작업을 진행합니다. </p></li>
+        <li><p class="skill_text">Figma</p><p>원활한 협업을 통해 웹 및 모바일 UI/UX 디자인을 만들 수 있습니다.</p></li>
+        <li><p class="skill_text">Notion</p><p>프로젝트 관리와 협업을 효율적으로 할 수 있습니다.</p></li>
+      </ul>
+    </section>
+    </div>
+    <div class="section">
+      <section id="portpolio_web">
+        <div class="txt_animate">
+          <h2 class="menu_profile">#PORTPOLIO</h2></div>
+          <div class="arrow"></div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="image_box"></div>
+              <div class="portpolio_web_box">
+              <strong>League Of Legend</strong>
+            
+              <dl>
+                <dt>작업 기간</dt>
+                <dd>현재 작업 중</dd>
+                  
+                <dt>작업 기여도</dt>
+                <dd>35 %</dd>
+                <dt>기술</dt>
+                <dd>HTML, CSS, JS</dd>                
+              </dl>
+               <ul class="icon_box">
+                <li><a href="https://innate-bergamot-b7e.notion.site/c0366f2f6b7b4c3ba8304ea83c2f8995"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>
+            </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image_box"></div>
+              <div class="portpolio_web_box">
+              <strong>SHINSAEGAE FOOD</strong>
+            
+              <dl>
+                <dt>작업 기간</dt>
+                <dd>하루에 4시간, 3주</dd>
+                <dt>작업 기여도</dt>
+                <dd>60 %</dd>
+                <dt>기술</dt>
+                <dd>HTML, CSS, JS</dd>                
+              </dl>
+               <ul class="icon_box">
+                <li><a href="https://innate-bergamot-b7e.notion.site/967a839cc76e47ec838103e339d54ad1?pvs=74"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>
+            </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image_box"></div>
+              <div class="portpolio_web_box">
+              <strong>Coffee Bean</strong>
+            
+              <dl>
+                <dt>작업 기간</dt>
+                <dd>하루에 4시간, 7일</dd>
+                <dt>작업 기여도</dt>
+                <dd>100 %</dd>
+                <dt>기술</dt>
+                <dd>HTML, CSS</dd>                
+              </dl>
+               <ul class="icon_box">
+                <li><a href="https://innate-bergamot-b7e.notion.site/9ddcf8c7c63746a686e522f7de2e3e73?pvs=74"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+
+              </ul>
+            </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image_box"></div>
+              <div class="portpolio_web_box">
+              <strong>짬뽕 9단</strong>
+            
+              <dl>
+                <dt>작업 기간</dt>
+                <dd>하루에 4시간, 7일</dd>
+                  
+                <dt>작업 기여도</dt>
+                <dd>100 %</dd>
+                <dt>기술</dt>
+                <dd>HTML, CSS</dd>                
+              </dl>
+               <ul class="icon_box">
+                <li><a href="https://innate-bergamot-b7e.notion.site/9-3dd0c0db5c3b47b79211c7eccaaaf6f7?pvs=74"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>
+            </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>          
+      </section>
+    </div>
+    <div class="section " id="section3">
+      <section id="design">
+        <div class="txt_animate">
+          <h2 class="menu_profile">#DESIGN</h2></div>
+          <div class="arrow"></div>
+        <div class="design_box">
+          <div class="design_notion"><a href="https://innate-bergamot-b7e.notion.site/0a71dc1d2f46491f8f3ee9907c5ed848">Design Portpolio on Notion</a></div>
+          <ul class="design1">
+            <li></li>
+            <div class="design_text"><a href="../design/design1.png">자세히 보기</a></div>          
+            <li></li>
+            <div class="design_text"><a href="../design/design2.png">자세히 보기</a></div>  
+            <li></li>
+            <div class="design_text"><a href="../design/design3.png">자세히 보기</a></div>  
+            <li></li>
+            <div class="design_text"><a href="../design/design4.png">자세히 보기</a></div>  
+            <li></li>
+            <div class="design_text"><a href="../design/design5.png">자세히 보기</a></div>  
+            <li></li>
+            <div class="design_text"><a href="../design/design6.png">자세히 보기</a></div> 
+            <li></li>
+            <div class="design_text"><a href="../design/design7_full.png">자세히 보기</a></div>   
+            <li></li>
+            <div class="design_text"><a href="../design/design8.png">자세히 보기</a></div>  
+            <li></li>
+            <div class="design_text"><a href="../design/design9.png">자세히 보기</a></div>  
+            <li></li>
+            <div class="design_text"><a href="../design/design10.png">자세히 보기</a></div>  
+            <li></li>
+            <div class="design_text"><a href="../design/design_11_full.pdf">자세히 보기</a></div>  
+            <!--피피티-->
+            <li></li>
+            <div class="design_text"><a href="../design/cip_design.png">자세히 보기</a></div>
+            <li></li>
+            <div class="design_text"><a href="../design/index_photo.jpg">자세히 보기</a></div>
+            <li></li>
+            <div class="design_text"><a href="../design/11_ppt.pdf">자세히 보기</a></div>
+            <li></li>
+            <div class="design_text"><a href="../design/9_ppt.pdf">자세히 보기</a></div>
+            <li></li>
+            <div class="design_text"><a href="../design/7_ppt.pdf">자세히 보기</a></div>
+            <li></li>
+            <div class="design_text"><a href="../design/6_ppt.pdf">자세히 보기</a></div>
+            <li></li>
+            <div class="design_text"><a href="../design/4_ppt.pdf">자세히 보기</a></div>
+            <li></li>
+            <div class="design_text"><a href="../design/3_ppt.pdf">자세히 보기</a></div>
+            <li></li>
+            <div class="design_text"><a href="../design/2_ppt.pdf">자세히 보기</a></div>
+            <li></li>
+            <div class="design_text"><a href="../design/1_ppt.pdf">자세히 보기</a></div>
+            <li></li>
+            <div class="design_text"><a href="../design/persona.png">자세히 보기</a></div>
+
+        </div>
+        
+      </section>
+    </div>
+    <div class="section" id="section4">
+      <section id="contact">
+        <div class="contact_box">
+          <strong>CONTACT ME</strong>
+          <strong>소중한 시간 내어주셔서 감사합니다.</strong>
+        </div>
+        <img src="../images/contact.png">
+          <div class="contact_box2">
+          <strong>궁금한 점이 있거나 협업을 원하시면 <br/>
+            언제든지 연락해주세요!</strong>
+          </div>
+          <div class="contact_box3">
+            <p>010-6378-2640</p>
+            <p>eunni0805@naver.com</p>
+          </div>
+          <div class="copyright_txt">
+            <p> Designed and developed with 
+            by Eunjin. <br/>© 2024 All rights reserved</p>
+          </div>
+        </section>
+    </div>
+  </script>
+</script>
+<!-- 풀 페이지 -->
+<script type="text/javascript" src="../js/fullpage.js"></script>
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        verticalCentered: false,
+
+        //to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
+        css3:false
+    });
+</script>
+  </body>
+</html>

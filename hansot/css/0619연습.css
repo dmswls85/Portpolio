@@ -1,0 +1,23 @@
+@charset "utf-8";
+/*초기화*/
+body,header,article,section,footer,hr,h1,h2,h3,ul,li,p,address,div,nav,img,ul,li{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none; font-weight: bold; color:#000; }
+.hidden{display: none;}
+img,hr{border:none;}
+address{font-style: normal;}
+body{font: normal 14px/1.2 "맑은고딕" sans-serif; text-transform: uppercase;}
+
+/*해더영역*/
+div#header_area{width: 1170px; height: 120px; background-color: beige; position: absolute; left: 50%; margin-left: -585px;}
+div#header_area > .util_menu > ul {float: right;}
+div#header_area > .util_menu ul li {float: left; margin-right: 29px;}
+div#header_area > .util_menu {width: 1170px; height: 30px; background-color: #ccc; }
+
+div#header_area > header { height: 90px; background-color: cadetblue; }
+
+/*비주얼영역*/
+article{height: 650px; background-color:thistle;}
+/*컨텐츠영역*/
+section {width: 1170px; height: 2645px; background-color: slategrey;}
+/*푸터영역*/
