@@ -171,8 +171,8 @@ function sync() {
   canvas.style.top = `${rect.top - padding}px`;   
   canvas.style.width = `${rect.width + padding * 2}px`;
   canvas.style.height = `${rect.height + padding * 2}px`; 
-  canvas.width = (rect.width + padding * 2) * ratio;
-  canvas.height = (rect.height + padding * 2) * ratio;
+  canvas.width = (rect.width + padding * 3) * ratio;
+  canvas.height = (rect.height + padding * 3) * ratio;
   canvas.style.pointerEvents = "none";
   
   // Sync text styles
@@ -182,7 +182,7 @@ function sync() {
   ctx.scale(ratio, ratio);
   ctx.clearRect(0, 0, rect.width, rect.height);
   ctx.font = styles.font;
-  ctx.fillStyle = "rgba(0, 0, 0, 1)";
+  ctx.fillStyle = "rgba(0, 0, 0, 0)";
 //  ctx.fillStyle = "white";
   ctx.textBaseline = "top";  
   ctx.textAlign = "center";

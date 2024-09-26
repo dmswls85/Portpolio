@@ -29,9 +29,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   
-    <script type="module" src="./js/background.js"></script> 
-    <script src="./js/index.js"></script>
 
+    <script src="./js/index.js"></script>
      <!--메타태그-->
     <meta name="Keywords" content="포트폴리오 웹퍼블리셔 웹디자인" />
     <meta http-equiv="Subject" content="포트폴리오"/>
@@ -50,26 +49,28 @@
   </head> 
   <body>
     <div id="fullpage">
+      <svg class="canvas" viewBox="0 0 150 150"></svg>
       <div class="section">
     <!--home-->
     <section id="home">
+      
       <nav class="nav1">
         <h3 class="hidden">gnb 영역</h3>
         <ul>
           <li><a href="#home">HOME</a></li>
-          <li class="always"><a href="#profile">PROFILE</a></li>
+          <li><a href="#profile">PROFILE</a></li>
           <li><a href="#skill">SKILL</a></li>
-          <li><a href="">PORTPOLIO</a></li>
-          <li><a href="">CONTACT</a></li>
+          <li><a href="#portpolio_web">PORTPOLIO</a></li>
+          <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
       <nav class="nav2">
-        <div class="navcircle"><a href="#home"></a></div>
-        <div class="navcircle2"><a href="#profile"></a></div>
-        <div class="navcircle3"><a href="#skill"></a></div>
-        <div class="navcircle4"><a href="#portpolio_web"></a></div>
-        <div class="navcircle5"><a href="#portpolio"></a></div>
-        <div class="navcircle6"><a href="#contact_us"></a></div>
+        <div class="navcircle" data-target="#home"><a href="#home"></a></div>
+        <div class="navcircle2" data-target="#profile"><a href="#profile"></a></div>
+        <div class="navcircle3" data-target="#skill"><a href="#skill"></a></div>
+        <div class="navcircle4" data-target="#portpolio_web"><a href="#portpolio_web"></a></div>
+        <div class="navcircle5" data-target="#portpolio"><a href="#portpolio"></a></div>
+        <div class="navcircle6" data-target="#contact"><a href="#contact"></a></div>
       </nav> 
       <h1>
         <a href="#"><img src="./images/logo.png" /></a>
@@ -82,13 +83,14 @@
         만드는 데 <br />집중하고 있으며, 좋아하는 일을 하면서 매일 배우고
         있습니다.</strong
       >
+      
       <div class="line"></div>
       <div class="line2"></div>
       <div class="line3"></div>
-
+      <small class="width">Mobile 해상도 : max-width 1023 적응형 퍼블리싱</small>
     </section>
     </div>
-    <div class="section">
+    <div class="section" id="second_page">
     <section id="profile">
       <h2 class="menu_profile"><span>#PROFILE</span></h2>
       <div class="line4"></div>
@@ -125,6 +127,7 @@
     <section id="skill">
       <div class="line6"></div>
       <h2 class="menu_profile"><span>#SKILL</span></h2>
+      <p class="click">※ 아이콘을 클릭하시면 더욱 자세한 내용을 살펴보실 수 있습니다.</p>
       <div class="line7"></div>
       <div class="line8"></div>
       <div class="flow_banner">
@@ -164,94 +167,132 @@
       <section id="portpolio_web">
         <h2 class="menu_profile"><span>#PORTPOLIO</span></h2>
         <div class="notion_box">
-          <a href="https://innate-bergamot-b7e.notion.site/0a71dc1d2f46491f8f3ee9907c5ed848"><img src="./images/notion.png"></a>
+          <a href="https://innate-bergamot-b7e.notion.site/0a71dc1d2f46491f8f3ee9907c5ed848"target="_blank"><img src="./images/notion.png"></a>
         </div>
+        <p>※ 아이콘을 클릭하시면 더욱 자세한 내용을 살펴보실 수 있습니다.</p>
         <div class="line9"></div>
-        <div class="line10"></div>
-        <div class="line11"></div>
-        <div class="line12"></div>
-        <div class="line13"></div>
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
+              <div class="slidegrid">
               <div class="image_box"></div>
-              <div class="right_box">
-              <strong>League Of Legend</strong>
+              <strong>League Of Legends</strong>
               <ul class="icon_box">
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href="https://innate-bergamot-b7e.notion.site/c0366f2f6b7b4c3ba8304ea83c2f8995?pvs=74"></a></li>
+                <li><a href="http://bjyoung7626.dothome.co.kr/leagueoflegends/login.html"target="_blank"></a></li>
+                <li><a href="https://github.com/dmswls85/Portpolio/tree/master/leagueoflegend" target="_blank"></a></li>
+                <li><a href="https://innate-bergamot-b7e.notion.site/c0366f2f6b7b4c3ba8304ea83c2f8995?pvs=74" target="_blank"></a></li>
               </ul>
+              <div class="slideb">
               <dl>
                 <dt>작업 기간</dt>
                 <dd>작업 중</dd>
                 <dt>작업 기여도</dt>
                 <dd>35 %</dd>
-
-                <div class="web_icon">
+              </dl>
+              <div class="web_icon">
                 <div class="html_icon"></div>
                 <div class="css_icon"></div>
                 <div class="jq_icon"></div>
               </div>
-              </dl>
+              </div>
             </div>
           </div>
-            <div class="swiper-slide">
-              <div class="image_box"></div>
-              <div class="right_box">
-              <strong>SHINSAEGAE FOOD</strong>
-              <ul class="icon_box">
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href="https://innate-bergamot-b7e.notion.site/967a839cc76e47ec838103e339d54ad1?pvs=74"></a></li>
-              </ul>
-              <dl>
-                <dt>작업 기간</dt>
-                <dd>3주</dd>
-                <dt>작업 기여도</dt>
-                <dd>60 %</dd>
-                <div class="html_icon"></div>
-                <div class="css_icon"></div>
-                <div class="jq_icon"></div>
-              </dl>
-            </div></div>
-            <div class="swiper-slide">
-              <div class="image_box"></div>
-              <div class="right_box">
-              <strong>Coffee Bean</strong>
-              <ul class="icon_box">
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href="https://innate-bergamot-b7e.notion.site/9ddcf8c7c63746a686e522f7de2e3e73?pvs=74"></a></li>
-              </ul>
-              <dl>
-                <dt>작업 기간</dt>
-                <dd>1주</dd>
-                <dt>작업 기여도</dt>
-                <dd>100 %</dd>
-                <div class="html_icon"></div>
-                <div class="css_icon"></div>
-              </dl>
-            </div></div>
-            <div class="swiper-slide">              
+          <div class="swiper-slide">
+            <div class="slidegrid">
             <div class="image_box"></div>
-            <div class="right_box">
-            <strong>짬뽕 9단</strong>
+            <strong>Shinsaegae Food</strong>
             <ul class="icon_box">
-              <li><a href=""></a></li>
-              <li><a href=""></a></li>
-              <li><a href="https://innate-bergamot-b7e.notion.site/9-3dd0c0db5c3b47b79211c7eccaaaf6f7?pvs=74"></a></li>
+              <li><a href="http://eunni0805.dothome.co.kr/shinsaegaefood/main/"target="_blank"></a></li>
+              <li><a href="https://github.com/dmswls85/Portpolio/tree/master/shinsaegaefood" target="_blank"></a></li>
+              <li><a href="https://innate-bergamot-b7e.notion.site/967a839cc76e47ec838103e339d54ad1?pvs=74" target="_blank"></a></li>
             </ul>
+            <div class="slideb">
             <dl>
               <dt>작업 기간</dt>
-              <dd>1주</dd>
+              <dd>하루 4시간, 3주</dd>
               <dt>작업 기여도</dt>
-              <dd>100 %</dd>
+              <dd>65 %</dd>
+            </dl>
+            <div class="web_icon">
               <div class="html_icon"></div>
               <div class="css_icon"></div>
-            </dl>
+              <div class="jq_icon"></div>
+            </div>
+            </div>
           </div>
         </div>
+        <div class="swiper-slide">
+          <div class="slidegrid">
+          <div class="image_box"></div>
+          <strong>Hansot</strong>
+          <ul class="icon_box">
+            <li><a href="http://eunni0805.dothome.co.kr/hansot/"target="_blank"></a></li>
+            <li><a href="https://github.com/dmswls85/Portpolio/tree/master/hansot" target="_blank"></a></li>
+            <li><a href="https://innate-bergamot-b7e.notion.site/9ddcf8c7c63746a686e522f7de2e3e73" target="_blank"></a></li>
+          </ul>
+          <div class="slideb">
+          <dl>
+            <dt>작업 기간</dt>
+            <dd>하루 4시간, 2주</dd>
+            <dt>작업 기여도</dt>
+            <dd>100 %</dd>
+          </dl>
+          <div class="web_icon">
+            <div class="html_icon"></div>
+            <div class="css_icon"></div>
+            <div class="jq_icon"></div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slidegrid">
+        <div class="image_box"></div>
+        <strong>Coffee Bean</strong>
+        <ul class="icon_box">
+          <li><a href="http://eunni0805.dothome.co.kr/coffeebean/"target="_blank"></a></li>
+          <li><a href="https://github.com/dmswls85/Portpolio/tree/master/coffeebean" target="_blank"></a></li>
+          <li><a href="https://innate-bergamot-b7e.notion.site/9ddcf8c7c63746a686e522f7de2e3e73?pvs=74" target="_blank"></a></li>
+        </ul>
+        <div class="slideb">
+        <dl>
+          <dt>작업 기간</dt>
+          <dd>하루 4시간, 1주</dd>
+          <dt>작업 기여도</dt>
+          <dd>100 %</dd>
+        </dl>
+        <div class="web_icon">
+          <div class="html_icon"></div>
+          <div class="css_icon"></div>
+          <div class="jq_icon"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="slidegrid">
+      <div class="image_box"></div>
+      <strong>짬뽕 9단</strong>
+      <ul class="icon_box">
+        <li><a href="http://eunni0805.dothome.co.kr/zzam/" target="_blank"></a></li>
+        <li><a href="https://github.com/dmswls85/Portpolio/tree/master/leagueoflegend" target="_blank"></a></li>
+        <li><a href="https://innate-bergamot-b7e.notion.site/9-3dd0c0db5c3b47b79211c7eccaaaf6f7" target="_blank"></a></li>
+      </ul>
+      <div class="slideb">
+      <dl>
+        <dt>작업 기간</dt>
+        <dd>하루 4시간, 1주</dd>
+        <dt>작업 기여도</dt>
+        <dd>100 %</dd>
+      </dl>
+      <div class="web_icon">
+        <div class="html_icon"></div>
+        <div class="css_icon"></div>
+        <div class="jq_icon"></div>
+      </div>
+      </div>
+    </div>
+  </div>
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
@@ -260,106 +301,131 @@
     </div>
     <div class="section">
       <section id="portpolio">
-        <h2 class="menu_profile"><span>#DESIGN</span></h2>
+        <h2 class="menu_profile"><span>#UX / DESIGN</span></h2>
         <div class="notion_box">
-          <a href="https://innate-bergamot-b7e.notion.site/0a71dc1d2f46491f8f3ee9907c5ed848"><img src="./images/notion.png"></a>
+          <a href="https://innate-bergamot-b7e.notion.site/0a71dc1d2f46491f8f3ee9907c5ed848"target="_blank"><img src="./images/notion.png"></a>
         </div>
+        <p>※ 아이콘을 클릭하시면 더욱 자세한 내용을 살펴보실 수 있습니다.</p>
         <div class="line14"></div>
         <div id="portpolio">
           <div class="swiper mySwiper1">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="./design/design1.png" />
-                <button class="btn-hover color-10"><a href="./design/design1.png" class="design_link">CLICK</a></button>
-              </div>
+                <img src="./design/design1.png"/>
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/design1.png" class="design_link modal">CLICK</a></button>
+            </div>
               <div class="swiper-slide">
                 <img src="./design/design2.png" />
-                <button class="btn-hover color-10"><a href="./design/design2.png" class="design_link">CLICK</a></button>
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/design2.png" class="design_link modal">CLICK</a></button>
               </div>
               <div class="swiper-slide">
-                <img src="./design/design3.png" />
-                <button class="btn-hover color-10"><a href="./design/design3.png" class="design_link">CLICK</a></button>
+                <img src="./design/de3_som.png" />
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/design3.png" class="design_link modal">CLICK</a></button>
               </div>
               <div class="swiper-slide">
                 <img src="./design/design4.png" />
-                <button class="btn-hover color-10"><a href="./design/design4.png" class="design_link">CLICK</a></button>
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/design4.png" class="design_link modal">CLICK</a></button>
               </div>
               <div class="swiper-slide">
                 <img src="./design/design5.png" />
-                <button class="btn-hover color-10"><a href="./design/design5.png" class="design_link">CLICK</a></button>
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/design5.png" class="design_link modal">CLICK</a></button>
               </div>
               <div class="swiper-slide">
                 <img src="./design/design6.png" />
-                <button class="btn-hover color-10"><a href="./design/design6.png" class="design_link">CLICK</a></button>
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/design6.png" class="design_link modal">CLICK</a></button>
               </div>
               <div class="swiper-slide">
                 <img src="./design/design7.png" />
-                <button class="btn-hover color-10"><a href="./design/design7_full.png" class="design_link">CLICK</a></button>
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/design7_full.png" class="design_link" target="_blank">CLICK</a></button>
               </div>
               <div class="swiper-slide">
-                <img src="./design/design8.png" />
-                <button class="btn-hover color-10"><a href="./design/design8.png" class="design_link">CLICK</a></button>
+                <img src="./design/de8_som.png" />
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/design8.png" class="design_link modal">CLICK</a></button>
               </div>
               <div class="swiper-slide">
-                <img src="./design/design9.png" />
-                <button class="btn-hover color-10"><a href="./design/design9.png" class="design_link">CLICK</a></button>
+                <img src="./design/fall_banner_som.png" />
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/design9.png" class="design_link modal">CLICK</a></button>
               </div>
               <div class="swiper-slide">
-                <img src="./design/design10.png" />
-                <button class="btn-hover color-10"><a href="./design/design10.png" class="design_link">CLICK</a></button>
+                <img src="./design/blackfriday_som.png" />
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/design10.png" class="design_link modal">CLICK</a></button>
               </div>
               <div class="swiper-slide">
                 <img src="./design/design11.png" />
-                <button class="btn-hover color-10"><a href="./design/design_11_full.pdf" class="design_link">CLICK</a></button>
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/design_11_full.pdf" class="design_link" target="_blank">CLICK</a></button>
               </div>
               <div class="swiper-slide">
                 <img src="./design/cip_design.png" />
-                <button class="btn-hover color-10"><a href="./design/cip_design.png" class="design_link">CLICK</a></button>
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/cip_design.png" class="design_link" target="_blank">CLICK</a></button>
               </div>
               <div class="swiper-slide">
-                <img src="./design/10.JPG" />
-                <button class="btn-hover color-10"><a href="./design/11_ppt.pdf" class="design_link">CLICK</a></button>
+                <img src="./design/prototypemob.png" />
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/11_ppt.pdf" class="design_link" target="_blank">CLICK</a></button>
               </div>
               <div class="swiper-slide">
-                <img src="./design/9.JPG" />
-                <button class="btn-hover color-10"><a href="./design/9_ppt.pdf" class="design_link">CLICK</a></button>
+                <img src="./design/smartmob.png" />
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/9_ppt.pdf" class="design_link" target="_blank">CLICK</a></button>
               </div>
               <div class="swiper-slide">
-                <img src="./design/7.JPG" />
-                <button class="btn-hover color-10"><a href="./design/7_ppt.pdf" class="design_link">CLICK</a></button>
+                <img src="./design/researchmob.png" />
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/7_ppt.pdf" class="design_link" target="_blank">CLICK</a></button>
               </div>
               <div class="swiper-slide">
-                <img src="./design/6.JPG" />
-                <button class="btn-hover color-10"><a href="./design/6_ppt.pdf" class="design_link">CLICK</a></button>
+                <img src="./design/survmob.png" />
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/6_ppt.pdf" class="design_link" target="_blank">CLICK</a></button>
               </div>
               <div class="swiper-slide">
-                <img src="./design/4.JPG" />
-                <button class="btn-hover color-10"><a href="./design/4_ppt.pdf" class="design_link">CLICK</a></button>
+                <img src="./design/baymob.png" />
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/4_ppt.pdf" class="design_link" target="_blank">CLICK</a></button>
               </div>
               <div class="swiper-slide">
-                <img src="./design/3.JPG" />
-                <button class="btn-hover color-10"><a href="./design/3_ppt.pdf" class="design_link">CLICK</a></button>
+                <img src="./design/visualmob.png" />
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/3_ppt.pdf" class="design_link"  target="_blank">CLICK</a></button>
               </div>
               <div class="swiper-slide">
-                <img src="./design/2.JPG" />
-                <button class="btn-hover color-10"><a href="./design/2_ppt.pdf" class="design_link">CLICK</a></button>
+                <img src="./design/tossmob.png" />
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/2_ppt.pdf" class="design_link"  target="_blank">CLICK</a></button>
               </div>
               <div class="swiper-slide">
-                <img src="./design/1.JPG" />
-                <button class="btn-hover color-10"><a href="./design/1_ppt.pdf" class="design_link">CLICK</a></button>
+                <img src="./design/trandmob.png" />
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/1_ppt.pdf" class="design_link"  target="_blank">CLICK</a></button>
               </div>
               <div class="swiper-slide">
-                <img src="./design/persona.png" />
-                <button class="btn-hover color-10"><a href="./design/persona.png" class="design_link">CLICK</a></button>
+                <img src="./design/persona_som.png" />
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/persona.png" class="design_link" target="_blank">CLICK</a></button>
               </div>
               <div class="swiper-slide">
                 <img src="./design/index_photo.jpg" />
-                <button class="btn-hover color-10"><a href="./design/index.jpg" class="design_link">CLICK</a></button>
+                <div class="background_design"></div>
+                <button class="btn-hover color-10"><a href="./design/index.jpg" class="design_link" target="_blank">CLICK</a></button>
               </div>
             </div>
             <div class="swiper-scrollbar"></div>
           </div>
-        </div>       
+          
+        </div>   
+            
       </section>
     </div>
     <div class="section">
@@ -377,7 +443,43 @@
         </div>
       </section>
     </div>
-
+    <div class="gray_layer" id="background"></div>
+    <div class="over_layer" id="front"></div>
 
   </body>
+  <script type="module">
+    import { SVG } from "https://cdn.skypack.dev/@svgdotjs/svg.js";
+import { gsap } from "https://cdn.skypack.dev/gsap@3.6.0";
+
+const svg = SVG(".canvas");
+const circles = [];
+
+generate();
+
+function generate() {
+svg.clear();
+
+// create 20 circles that animate to a random x, y, scale, and fill
+for (let i = 0; i < 20; i++) {
+  const circle = svg.circle(30).cx(0).cy(0).fill("hsl(0, 100%, 100%")
+    .node;
+
+  // animate the circle element to a random position on the canvas, with a random fill color and scale value
+  gsap.to(circle, {
+    x: "random(0, 300, true)",
+    y: "random(0, 500, true)",
+    scale: "random(0.4, 1, true)",
+    ease: "elastic.out(1, 0.5)",
+    duration: 1.5,
+    delay: "random(0, 0.3, true)",
+    attr: {
+      fill: () => `hsl(${gsap.utils.random(0, 360)}, 75%, 75%)`
+    },
+    repeat: -1,
+    repeatDelay: 1.5,
+    repeatRefresh: true
+  });
+}
+}
+  </script>
 </html>

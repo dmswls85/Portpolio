@@ -68,8 +68,9 @@ a {
     float: right;
     width: 40%;
     margin-top: 20px;
-    margin-right: 200px;
+    margin-right: 9%;
     height: 100px;
+    z-index: 9999;
   }
   section#home > nav.nav1 ul {
     display: flex;
@@ -101,9 +102,16 @@ a {
   }
 
   /*home*/
+  .canvas {
+    width: 100%;
+    height: 600vh;
+    z-index: -9999;
+    position: absolute;
+    top: 0;
+  }
   section#home {
     width: 100%;
-    height: 918px;
+    height: 950px;
     position: relative;
   }
   h1 img {
@@ -113,49 +121,45 @@ a {
     top: -85px;
     left: 40px;
   }
-  section#home nav.nav2 {
-    position: fixed;
-    right: 30px;
-    top: 40%;
-    z-index: 100;
-  }
-  section#home nav.nav2 div {
-    background-color: #ffffff;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-  }
-  section#home nav.nav2 div.navcircle:hover {
-    background-color: #ffbdbd;
-    transition: 0.5s;
-    transform: scale(2);
-  }
-  section#home nav.nav2 div.navcircle2:hover {
-    background-color: #ffd298;
-    transition: 0.5s;
-    transform: scale(2);
-  }
-  section#home nav.nav2 div.navcircle3:hover {
-    background-color: #fafc96;
-    transition: 0.5s;
-    transform: scale(2);
-  }
-  section#home nav.nav2 div.navcircle4:hover {
-    background-color: #d6ffaf;
-    transition: 0.5s;
-    transform: scale(2);
-  }
-  section#home nav.nav2 div.navcircle5:hover {
-    background-color: #aae7ff;
-    transition: 0.5s;
-    transform: scale(2);
-  }
-  section#home nav.nav2 div.navcircle6:hover {
-    background-color: #e4bcff;
-    transition: 0.5s;
-    transform: scale(2);
-  }
+}
+.nav2 {
+  display: flex; /* 기본적으로 flex로 배치 */
+  flex-direction: column; /* 세로 배치 */
+  align-items: center; /* 원들 가운데 정렬 */
+  position: fixed; /* 스크롤에도 따라오게 하기 위함 */
+  right: 40px; /* 화면 오른쪽에 배치 */
+  top: 50%; /* 화면 중간에 배치 */
+  transform: translateY(-50%); /* 세로 중앙 정렬 보정 */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* 부드러운 나타남/사라짐 효과 */
+  z-index: 1000; /* 화면 위에 보이도록 설정 */
+}
+
+.nav2.hidden {
+  opacity: 0; /* 보이지 않게 */
+  visibility: hidden; /* 완전히 숨기기 */
+}
+
+.nav2 div {
+  background-color: #ffffff;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  transition: background-color 0.3s, transform 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+.navcircle, .navcircle2, .navcircle3, .navcircle4, .navcircle5, .navcircle6 {
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.nav2 div:hover {
+  transform: scale(1.2); /* 마우스 오버 시 크기 키우기 */
+}
+.nav2.hidden {
+  opacity: 0; /* 보이지 않게 */
+  visibility: hidden; /* 완전히 숨기기 */
+}
+
   section#home nav.nav2 div a {
     width: 100%;
     height: 100%;
@@ -172,7 +176,7 @@ a {
     float: left;
     position: relative;
   }
-
+  section#home small{bottom:20px; left: 45%; position: absolute;}
   /*배경*/
   .canvas {
     width: 100%;
@@ -212,7 +216,7 @@ a {
 
     color: #fff;
     position: absolute;
-    top: 180px;
+    top: 19%;
     left: 10%;
   }
   section#home div.line2 {
@@ -221,7 +225,7 @@ a {
     background-color: #fff;
     color: #fff;
     position: absolute;
-    top: 480px;
+    top: 52%;
     left: 10%;
   }
   section#home div.line3 {
@@ -230,14 +234,14 @@ a {
     background-color: #ffffff;
     color: #fff;
     position: absolute;
-    top: 800px;
+    top: 87%;
     left: 10%;
   }
 
   /*profile*/
   section#profile {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 10;
   }
   section#profile h2.menu_profile {
@@ -264,7 +268,7 @@ a {
   }
   section#profile div.about_profile img {
     width: 100%;
-    height: 500px;
+    height: 55vh;
     border-radius: 35px;
     z-index: 10;
   }
@@ -278,6 +282,15 @@ a {
   top: 1210px;
   left: 260px;
 } */
+  section#skill h2.menu_profile {
+    width: 30px;
+    height: 200px;
+    position: absolute;
+    top: 40px;
+    left: 12%;
+    color: #ffffff;
+    font-size: 70px;
+  }
   section#profile > h2.name {
     float: left;
     margin-left: 3%;
@@ -286,8 +299,10 @@ a {
     font-size: 50px;
     position: relative;
     top: 160px;
-
     width: 50%;
+  }
+  #second_page {
+    position: relative;
   }
   section#profile h2 span.name:after {
     content: "";
@@ -312,20 +327,17 @@ a {
     }
   }
   section#profile div.about_intro {
-    float: left;
-    margin-left: 3%;
     width: 50%;
-    padding-left: 7%;
-    margin-top: 160px;
-
+    position: absolute;
+    left: 43%;
+    top: 48vh;
   }
   section#profile div.about_intro dl {
     float: right;
-    margin-top: 30px;
+
     font-size: 25px;
 
     line-height: 50px;
-
   }
   section#profile div.about_intro dl dt {
     float: left;
@@ -347,8 +359,8 @@ a {
     height: 1px;
     background-color: #fff;
     color: #fff;
-    position: absolute;
-    top: 1100px;
+    position: relative;
+    top: 19%;
     left: 10%;
   }
   section#profile div.line5 {
@@ -356,20 +368,25 @@ a {
     height: 650px;
     background-color: #fff;
     color: #fff;
-    position: absolute;
-    top: 1100px;
+    position: relative;
+    top: 19%;
     left: 38%;
   }
 
   /*skill*/
   section#skill {
     width: 100%;
-    height: 900px;
+    height: 100%;
     padding-top: 310px;
     box-sizing: border-box;
     position: relative;
   }
-
+  section#skill p.click {
+    position: absolute;
+    top: 12%;
+    right: 12%;
+    font-size: clamp(9px, 15vw, 15px);
+  }
   /*skill line*/
   section#skill div.line6 {
     width: 80%;
@@ -377,7 +394,7 @@ a {
     background-color: #fff;
     color: #fff;
     position: absolute;
-    top: 180px;
+    top: 19%;
     left: 10%;
   }
   section#skill div.line7 {
@@ -386,7 +403,7 @@ a {
     background-color: #fff;
     color: #fff;
     position: absolute;
-    top: 480px;
+    top: 52%;
     left: 10%;
   }
   section#skill div.line8 {
@@ -395,28 +412,21 @@ a {
     background-color: #fff;
     color: #fff;
     position: absolute;
-    top: 780px;
+    top: 87%;
     left: 10%;
   }
 
-  section#skill h2.menu_profile {
-    width: 30px;
-    height: 200px;
-    position: absolute;
-    top: 40px;
-    left: 12%;
-    color: #ffffff;
-    font-size: 70px;
-  }
   /*움직이는 아이콘*/
   .flow_banner {
     overflow: hidden;
     display: flex;
     width: 80%;
-    margin: -70px auto;
+    margin: -7% auto ;
+    height: 50%;
   }
   .flow_banner .list {
     display: flex;
+    margin: auto 0;
   }
   .flow_banner .list > li {
     white-space: nowrap;
@@ -533,22 +543,22 @@ a {
   section#skill div.flow_banner ul.list li div:hover {
     background-color: rgba(255, 255, 255, 0.7);
     transition: 1s;
-    transform: scale(1.2);
+    scale: 1.05;
   }
   /*텍스트 박스*/
   section#skill div.text_box {
     width: 80%;
-    height: 250px;
+    height: 52%;
     border-radius: 60px;
     justify-content: center;
     align-items: center;
     display: flex;
-    margin: 155px auto 0;
+    margin: 7% auto 0;
   }
   section#skill div.text_box p {
     text-align: center;
     margin: auto 0;
-    font-size: 25px;
+    font-size: clamp(15px, 10vw, 25px);
     line-height: 60px;
   }
 
@@ -569,7 +579,7 @@ a {
   /*portpolio*/
   section#portpolio_web {
     width: 100%;
-    height: 900px;
+    height: 100vh;
     padding-top: 310px;
     box-sizing: border-box;
     position: relative;
@@ -578,59 +588,41 @@ a {
   section#portpolio_web div.line9 {
     width: 80%;
     height: 1px;
-    background-color: #fff;
+    background-color: #ffffff;
     color: #fff;
     position: absolute;
-    top: 180px;
+    top: 19%;
     left: 10%;
   }
-  section#portpolio_web div.line10 {
-    width: 1px;
-    height: 650px;
-    background-color: #fff;
-    color: #fff;
-    position: absolute;
-    top: 180px;
-    right: 36%;
-  }
-  section#portpolio_web div.line11 {
-    width: 26%;
-    height: 1px;
-    background-color: #fff;
-    color: #fff;
-    position: absolute;
-    top: 440px;
-    right: 10%;
-  }
-  section#portpolio_web div.line12 {
-    width: 26%;
-    height: 1px;
-    background-color: #fff;
-    color: #fff;
-    position: absolute;
-    top: 540px;
-    right: 10%;
-  }
-  section#portpolio_web div.line13 {
-    width: 26%;
-    height: 1px;
-    background-color: #fff;
-    color: #fff;
-    position: absolute;
-    top: 700px;
-    right: 10%;
-  }
-  section#portpolio_web div.notion_box{ width: 80px; height: 80px; float: right;  
+
+  section#portpolio_web div.notion_box {
+    width: 80px;
+    height: 80px;
+    float: right;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
-    border-radius: 30px;
+    border-radius: 50px;
     backdrop-filter: blur(30px);
     box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
     border: 1.5px solid rgba(225, 225, 225, 0.7);
     position: absolute;
     top: 6%;
-    right: 11%;
+    left: 36.5%;
   }
-  section#portpolio_web div.notion_box img{width: 50px; height: 50px; position: relative; top: 15px; left: 15px;}
+  section#portpolio_web div.notion_box:hover {
+    width: 80px;
+    height: 80px;
+    float: right;
+    box-shadow: 0px 0px 20px rgb(192, 216, 255);
+    border: 1.5px solid rgb(157, 185, 216);
+    transition: 1s;
+  }
+  section#portpolio_web div.notion_box img {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 15px;
+    left: 15px;
+  }
 
   section#portpolio_web h2.menu_profile {
     width: 30px;
@@ -641,98 +633,124 @@ a {
     color: #ffffff;
     font-size: 70px;
   }
+  section#portpolio_web p {
+    position: absolute;
+    top: 12%;
+    right: 12%;
+    font-size: clamp(9px, 15vw, 15px);
+  }
+
   /*슬라이드*/
   div.swiper.mySwiper {
     position: relative;
-    height: 650px;
-    margin-top: -100px;
+    height: 750px;
+    margin-top: -80px;
     margin-left: 10%;
   }
   .swiper {
-    width: 85%;
+    width: 80%;
     height: 60%;
   }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-
-    display: flex;
-    justify-content: flex-start;
+  .slidegrid {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+  }
+  .swiper-slide .slidegrid {
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 2fr 1.5fr;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    gap: 4% 4%;
+    margin: 0 auto;
   }
 
   .swiper-slide div.image_box {
-    float: left;
     display: block;
-    width: 55%;
-    height: 85%;
-    background: url(../images/OR7V1C0.jpg);
-    margin-top: 40px;
+    width: 100%;
+    height: 90%;
+    background: url(../images/lolmockup.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    border-radius: 25px;
-    margin-left: 5%;
+    border-radius: 15px;
+    grid-row: 1/4 span;
+    grid-column: 1;
+    margin-left: 4%;
   }
-  .swiper-slide:nth-child(2) div.image_box {
-    float: left;
-    display: block;
-    width: 55%;
-    height: 85%;
-    object-fit: cover;
-    background: url(../images/커피빈\ -\ 복사본.png);
-    margin-top: 40px;
-    background-size: cover;
-    border-radius: 25px;
-    margin-left: 70px;
+  .swiper-slide:nth-child(2) div.image_box{
+    background: url(../images/shinsaegae_mockup.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90%;
   }
-  .swiper-slide:nth-child(3) div.image_box {
-    float: left;
-    display: block;
-    width: 55%;
-    height: 85%;
-    object-fit: cover;
-    background: url(../images/커피빈\ -\ 복사본.png);
-    margin-top: 40px;
-    background-size: cover;
-    border-radius: 25px;
-    margin-left: 70px;
+  .swiper-slide:nth-child(3) div.image_box{
+    background: url(../images/hansot_mockup.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90%;
   }
-  .swiper-slide div.right_box {
+  .swiper-slide:nth-child(4) div.image_box{
+    background: url(../images/coffeebean_mockup.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90%;
+  }
+  .swiper-slide:nth-child(5) div.image_box{
+    background: url(../images/zzam_mockuo.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90%;
+  }
+  .swiper-slide {
     width: 30%;
     height: 100%;
     float: right;
-    margin-right: 5%;
-    margin-top: 15px;
+    position: relative;
 
   }
-  .swiper-slide div.right_box strong {
-    font-size: 60px;
-    margin-left: 12px;
+  .swiper-slide:last-child div.right_box {
+    padding-top: 3vh;
   }
-  .swiper-slide:nth-child(3) div.right_box strong {
+  .swiper-slide strong {
     font-size: 60px;
-    margin-left: 12px;
-
-    height: 175px;
     display: block;
-    line-height: 160px;
-  }
-  .swiper-slide:nth-child(4) div.right_box strong {
-    font-size: 60px;
-    margin-left: 12px;
-
-    height: 175px;
-    display: block;
-    line-height: 160px;
-  }
-  .swiper-slide div.right_box ul {
-    margin: 65px auto 25px;
-    height: 50px;
+    grid-row: 1;
+    grid-column: 2;
+    padding: 1% 1% 2%;
+    position: relative;
     box-sizing: border-box;
-    padding-right: 30%;
   }
-  .swiper-slide div.right_box ul li {
+  .swiper-slide strong::after {
+    content: "";
+    width: 20%;
+    height: 1px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .swiper-slide ul {
+    height: 100%;
+    box-sizing: border-box;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 4;
+    grid-column: 2;
+    margin: 0 auto 10%;
+    position: relative;
+  }
+  .swiper-slide ul li {
     width: 50px;
     height: 50px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
@@ -742,92 +760,103 @@ a {
     border: 1.5px solid rgba(225, 225, 225, 0.7);
     border-radius: 15px;
     float: right;
-    margin-right: 5%;
+    margin-right: 7%;
     text-indent: -9999px;
     box-sizing: border-box;
   }
-  .swiper-slide div.right_box > ul.icon_box li:hover {
+  .swiper-slide > ul.icon_box li:hover {
     background-color: rgba(255, 255, 255, 0.5);
-
     transition: 0.5s;
     transform: scale(1.1);
   }
-  .swiper-slide div.right_box ul li a {
+  .swiper-slide ul li a {
     width: 100%;
     height: 100%;
     display: block;
     text-indent: -9999px;
   }
-  .swiper-slide div.right_box ul li:nth-child(1) {
+  .swiper-slide ul li:nth-child(1) {
     background: url(../images/whitecursor2.png) no-repeat;
     background-position: center;
     background-size: 60%;
   }
-  .swiper-slide div.right_box ul li:nth-child(2) {
+
+  .swiper-slide ul li:nth-child(2) {
     background: url(../images/git.png) no-repeat;
     background-position: center;
     background-size: 60%;
   }
-  .swiper-slide div.right_box ul li:nth-child(3) {
+  .swiper-slide ul li:nth-child(3) {
     background: url(../images/notion.png) no-repeat;
     background-position: center;
     background-size: 60%;
   }
-  .swiper-slide div.right_box dl {
-    width: 100%;
-    height: 30%;
-    border-radius: 40px;
+  .swiper-slide dl {
+    width: 60%;
     box-sizing: border-box;
-    line-height: 60px;
-    padding: 20px 40px;
+    display: inline-block;
+    padding-right: 10%;
+    position: relative;
   }
-  .swiper-slide div.right_box dl dt {
+  .swiper-slide dl::after{content: ''; width: 1px; height: 80%; background-color: #fff;display: block; position: absolute; right: 0; top: 10%;}
+  .slideb {
+    grid-row: 2;
+    grid-column: 2;
+    margin-right: 27%;
+    height: 100%;
+    width: 100%;
+    padding-right: 27%;
+    box-sizing: border-box;
+    padding-top: 5%;
+  }
+  .swiper-slide dl dt {
     float: left;
-    font-size: 27px;
+    font-size: 20px;
     font-weight: 600;
     margin-right: 0px;
-    width: 50%;
+    width: 100%;
+    text-align: right;
+    line-height: 35px;
   }
-  .swiper-slide div.right_box dl dd {
-    font-size: 27px;
-    font-weight: 600;
-    width: 50%;
+  .swiper-slide dl dd {
+    font-size: 20px;
+    font-weight: 400;
+    width: 100%;
+    text-align: right;
+    line-height: 35px;
+  }
+  .swiper-slide div.web_icon {
+    height: 100%;
+    width: 20%;
     float: right;
+    margin-bottom: 30px;
   }
-  .swiper-slide div.right_box dl div {
-    float: left;
-  }
-  .swiper-slide div.right_box dl div.web_icon{width: 63%; box-sizing: border-box; margin-top: 50px;  margin-left: 17%;}
 
-  .swiper-slide div.right_box dl div.web_icon div{    
+  .swiper-slide div.web_icon div {
     background-repeat: no-repeat;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
     border-radius: 30px;
-    backdrop-filter: blur(30px);
-    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
-    border: 1.5px solid rgba(225, 225, 225, 0.7);
-    border-radius: 15px;
     background-position: center;
-
-    width: 70px;
-    height: 70px;}
-  .swiper-slide div.right_box dl div.html_icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom:20%;
+    
+  }
+  .swiper-slide div.html_icon {
     background-image: url(../images/html5.png);
     background-size: 75%;
-    margin-right: 8%;     
   }
 
-  .swiper-slide div.right_box dl div.css_icon {
+  .swiper-slide div.css_icon {
     background-image: url(../images/css.png);
     background-size: 55%;
-    margin-right: 8%;     
+
   }
-  .swiper-slide div.right_box dl div.jq_icon {
+  .swiper-slide div.jq_icon {
     background-image: url(../images/jq.png);
     background-size: 75%;
   }
-
-  .swiper-slide div.right_box dl a {
+  .swiper-slide dl a {
     width: 100%;
     height: 100%;
     display: block;
@@ -835,11 +864,11 @@ a {
     color: #000;
     font-weight: 600;
   }
-  .swiper-slide div.right_box dl div a:hover {
+  .swiper-slide dl div a:hover {
     color: #fff;
     transition: 0.5s;
   }
-
+  
   /*portpolio design*/
 
   section#portpolio {
@@ -850,13 +879,14 @@ a {
     position: relative;
   }
   section#portpolio h2.menu_profile {
-    width: 30px;
+    width: 100%;
     height: 200px;
     position: absolute;
     top: 40px;
     left: 12%;
     color: #ffffff;
     font-size: 70px;
+
   }
   section#portpolio div.line14 {
     width: 80%;
@@ -867,17 +897,34 @@ a {
     top: 180px;
     left: 10%;
   }
-  section#portpolio div.notion_box{ width: 80px; height: 80px; float: right;  
+  section#portpolio div.notion_box {
+    width: 80px;
+    height: 80px;
+    float: right;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
-    border-radius: 30px;
+    border-radius: 50px;
     backdrop-filter: blur(30px);
     box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
     border: 1.5px solid rgba(225, 225, 225, 0.7);
     position: absolute;
     top: 6%;
-    right: 11%;
+    left: 38%;
   }
-  section#portpolio div.notion_box img{width: 50px; height: 50px; position: relative; top: 15px; left: 15px;}
+  section#portpolio div.notion_box:hover {
+    width: 80px;
+    height: 80px;
+    float: right;
+    box-shadow: 0px 0px 20px rgb(192, 216, 255);
+    border: 1.5px solid rgb(157, 185, 216);
+    transition: 1s;
+  }
+  section#portpolio div.notion_box img {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 15px;
+    left: 15px;
+  }
 
   section#portpolio {
     width: 100%;
@@ -897,13 +944,15 @@ a {
     width: 70%;
     padding-top: 50px;
     padding-bottom: 80px;
+    z-index: 100;
   }
 
   #portpolio > .mySwiper1 .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 700px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
+    z-index: 10;
   }
 
   #portpolio > .mySwiper1 .swiper-slide img {
@@ -912,8 +961,8 @@ a {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    z-index: 100;
   }
-
   #portpolio > .mySwiper1 .swiper-slide:hover .btn-hover {
     width: 200px;
     font-size: 16px;
@@ -922,32 +971,63 @@ a {
     cursor: pointer;
     margin: 20px;
     height: 55px;
-    text-align:center;
+    text-align: center;
     border: none;
     background-size: 300% 100%;
     display: block;
     border-radius: 50px;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     font-family: "Bagel Fat One", system-ui;
-}
+  }
 
-#portpolio > .mySwiper1 .swiper-slide:hover .btn-hover:focus {
-    outline: none;}
-.btn-hover.color-10 {
-      background-image: linear-gradient(to right, #ecb7cd, #ffd0bf, #ffabca , #ffe4b8);
-  box-shadow: 0 4px 15px 0 rgb(235, 223, 255);
-  display: none;
-  position: absolute;
-  top: 47%; left: 47%; transform: translate(-50%, -50%);
-  font-family: "Bagel Fat One", system-ui;
+  #portpolio > .mySwiper1 .swiper-slide:hover .btn-hover:focus {
+    outline: none;
+  }
+  .btn-hover.color-10 {
+    background-image: linear-gradient(
+      to right,
+      #ecb7cd,
+      #ffd0bf,
+      #ffabca,
+      #ffe4b8
+    );
+    box-shadow: 0 4px 15px 0 rgb(235, 223, 255);
+    display: none;
+    position: absolute;
+    top: 47%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    font-family: "Bagel Fat One", system-ui;
+    z-index: 99999;
+  }
+  #portpolio > .mySwiper1 .swiper-slide a {
+    font-size: 25px;
+    font-family: "Bagel Fat One", system-ui;
+    letter-spacing: 1.5px;
+  }
 
-}
-#portpolio > .mySwiper1 .swiper-slide a{font-size: 25px;   font-family: "Bagel Fat One", system-ui; letter-spacing: 1.5px;}
-
-
+  section#portpolio p {
+    position: absolute;
+    top: 12%;
+    right: 12%;
+    font-size: clamp(9px, 15vw, 15px);
+  }
+  .background_design {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  #portpolio > .mySwiper1 .swiper-slide:hover div.background_design {
+    opacity: 1;
+  }
   /*contact*/
   div.contact_box_left {
     width: 49%;
@@ -1027,7 +1107,6 @@ a {
   }
   /* PC (해상도 1024px)*/
   @media all and (min-width: 1024px) {
-    
   }
 
   /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
@@ -1035,4 +1114,26 @@ a {
   }
 
   /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+/** 화면 전체를 덮는 배경 레이어의 위치, 크기, 투명도 지정 > 기본적으로 표시되지 않도록 설정 */
+.gray_layer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.6;
+  display: none;
+}
+
+/** 이미지가 표현될 레이어를 화면 중앙에 배치 > 기본적으로 표시되지 않도록 설정 */
+.over_layer {
+  /* 요소의 좌측상단 꼭지점이 화면 중앙에 위치하게 된다. */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* 요소의 크기/2 만큼 왼쪽,상단 방향으로 이동시켜 가운데 배치한다 */
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 9999;
 }

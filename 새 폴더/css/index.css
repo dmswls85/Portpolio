@@ -1,0 +1,1060 @@
+@charset "utf-8";
+/*초기화*/
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #fff;
+  background-image: linear-gradient(
+    340deg,
+    hsl(220deg 50% 30%) 0%,
+    hsl(200deg 30% 40%) 20%,
+    hsl(180deg 20% 50%) 35%,
+    hsl(220deg 30% 60%) 70%,
+    hsl(270deg 30% 70%) 90%,
+    hsl(300deg 30% 70%) 100%
+  );
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  /* cursor: url(../images/cursor.png), auto; */
+}
+.hidden {
+  display: none;
+}
+
+/*웹*/
+@media screen and (min-width: 1024px) {
+  header {
+    width: 100%;
+    height: 100px;
+  }
+
+  header ul li a {
+    font-size: 20px;
+  }
+  .scroll::-webkit-scrollbar {
+    display: none;
+  }
+  .scroll {
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+  }
+  html {
+    overflow: hidden;
+  }
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  } /*%에서 vw,vh로 바꿈 부모VW,VH값으로 지정시 자식은 %로 가능*/
+  .content {
+    height: 100vh;
+  }
+  div.section {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  /*gnb 영역*/
+  section#home > nav.nav1 {
+    float: right;
+    width: 40%;
+    margin-top: 20px;
+    margin-right: 9%;
+    height: 100px;
+    z-index: 9999;
+  }
+  section#home > nav.nav1 ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  section#home > nav.nav1 ul li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+  }
+  section#home > nav.nav1 ul li {
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+    color: #ffffff;
+    border-radius: 30px;
+    line-height: 50px;
+    text-align: center;
+  }
+  section#home > nav.nav1 ul li:hover {
+    background-color: #fff;
+    transition: 1s;
+  }
+  section#home > nav.nav1 ul li a:hover {
+    color: #161616;
+  }
+
+  /*home*/
+  section#home {
+    width: 100%;
+    height: 918px;
+    position: relative;
+  }
+  h1 img {
+    width: 60px;
+    height: 70px;
+    position: absolute;
+    top: -85px;
+    left: 40px;
+  }
+  section#home nav.nav2 {
+    position: fixed;
+    right: 30px;
+    top: 40%;
+    z-index: 99999;
+
+  }
+  section#home nav.nav2 div {
+    background-color: #ffffff;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    z-index: 99999;
+  }
+  section#home nav.nav2 div.navcircle:hover {
+    background-color: #ffbdbd;
+    transition: 0.5s;
+    transform: scale(2);
+  }
+  section#home nav.nav2 div.navcircle2:hover {
+    background-color: #ffd298;
+    transition: 0.5s;
+    transform: scale(2);
+  }
+  section#home nav.nav2 div.navcircle3:hover {
+    background-color: #fafc96;
+    transition: 0.5s;
+    transform: scale(2);
+  }
+  section#home nav.nav2 div.navcircle4:hover {
+    background-color: #d6ffaf;
+    transition: 0.5s;
+    transform: scale(2);
+  }
+  section#home nav.nav2 div.navcircle5:hover {
+    background-color: #aae7ff;
+    transition: 0.5s;
+    transform: scale(2);
+  }
+  section#home nav.nav2 div.navcircle6:hover {
+    background-color: #e4bcff;
+    transition: 0.5s;
+    transform: scale(2);
+  }
+  section#home nav.nav2 div a {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  section#home {
+    z-index: 10;
+  }
+  section#home h2 {
+    font-size: 60px;
+    margin-left: 10%;
+    letter-spacing: 3px;
+    margin-top: 160px;
+    float: left;
+    position: relative;
+  }
+
+  /*배경*/
+  .canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -9999;
+    left: 0;
+  }
+
+  /* section#home h2:after {
+  content: "";
+  width: 104%;
+  height: 25px;
+  display: block;
+  background: #0085ff;
+  position: absolute;
+  top: 58%;
+  z-index: -10;
+  opacity: 80%;
+  left: -2%;
+  animation: mymove1 1.5s;
+  transform-origin: 0% 100%;
+} */
+
+  section#home strong {
+    margin-right: 220px;
+    float: right;
+    margin-top: 220px;
+    font-size: 25px;
+    text-align: right;
+  }
+  /*home line*/
+  section#home div.line {
+    width: 80%;
+    height: 1px;
+    background-color: #fff;
+
+    color: #fff;
+    position: absolute;
+    top: 19%;
+    left: 10%;
+  }
+  section#home div.line2 {
+    width: 80%;
+    height: 1px;
+    background-color: #fff;
+    color: #fff;
+    position: absolute;
+    top:52%;
+    left: 10%;
+  }
+  section#home div.line3 {
+    width: 80%;
+    height: 1px;
+    background-color: #ffffff;
+    color: #fff;
+    position: absolute;
+    top: 87%;
+    left: 10%;
+  }
+
+  /*profile*/
+  section#profile {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+  section#profile h2.menu_profile {
+    width: 100%;
+
+    color: #ffffff;
+    font-size: 70px;
+    animation: blink 0.7s infinite;
+    left: 2%;
+    text-align: left;
+    float: left;
+    margin-left: 3%;
+
+    padding-left: 7%;
+    position: relative;
+    top: 50px;
+  }
+  section#profile div.about_profile {
+    margin-left: 12%;
+    margin-top: 180px;
+    position: relative;
+    float: left;
+    width: 20%;
+  }
+  section#profile div.about_profile img {
+    width: 100%;
+    height: 55vh;
+    border-radius: 35px;
+    z-index: 10;
+  }
+  /* section#profile div.box {
+  background-color: #d4d4d4;
+  width: 390px;
+  height: 500px;
+  border-radius: 50px;
+  z-index: -10;
+  position: absolute;
+  top: 1210px;
+  left: 260px;
+} */
+section#skill h2.menu_profile {
+  width: 30px;
+  height: 200px;
+  position: absolute;
+  top: 40px;
+  left: 12%;
+  color: #ffffff;
+  font-size: 70px;
+}
+  section#profile > h2.name {
+    float: left;
+    margin-left: 3%;
+
+    padding-left: 7%;
+    font-size: 50px;
+    position: relative;
+    top: 160px;
+    width: 50%;
+  }
+  #second_page{position: relative;}
+  section#profile h2 span.name:after {
+    content: "";
+    width: 45%;
+    height: 25px;
+    display: block;
+    background: rgba(136, 229, 255, 0.8);
+    position: absolute;
+    top: 80%;
+    z-index: -10;
+    opacity: 80%;
+    left: 15%;
+    animation: mymove1 1.5s;
+    transform-origin: 0% 100%;
+  }
+  @keyframes mymove1 {
+    from {
+      transform: scaleX(0.1);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+  section#profile div.about_intro {
+    width: 50%;
+    position: absolute;
+    left: 43%;
+    top: 48vh;
+  }
+  section#profile div.about_intro dl {
+    float: right;
+
+    font-size: 25px;
+
+    line-height: 50px;
+
+  }
+  section#profile div.about_intro dl dt {
+    float: left;
+  }
+  section#profile div.about_intro dl dt:nth-child(2n + 1) {
+    text-transform: uppercase;
+    float: left;
+    font-weight: bold;
+    width: 20%;
+  }
+  section#profile div.about_intro dl dd {
+    float: right;
+    width: 70%;
+  }
+
+  /*profile line*/
+  section#profile div.line4 {
+    width: 80%;
+    height: 1px;
+    background-color: #fff;
+    color: #fff;
+    position: relative;
+    top: 19%;
+    left: 10%;
+  }
+  section#profile div.line5 {
+    width: 1px;
+    height: 650px;
+    background-color: #fff;
+    color: #fff;
+    position: relative;
+    top: 19%;
+    left: 38%;
+  }
+
+  /*skill*/
+  section#skill {
+    width: 100%;
+    height: 100%;
+    padding-top: 310px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  section#skill p.click {position: absolute; top: 12%; right: 12%; font-size: clamp(9px,15vw,15px)}
+  /*skill line*/
+  section#skill div.line6 {
+    width: 80%;
+    height: 1px;
+    background-color: #fff;
+    color: #fff;
+    position: absolute;
+    top: 19%;
+    left: 10%;
+  }
+  section#skill div.line7 {
+    width: 80%;
+    height: 1px;
+    background-color: #fff;
+    color: #fff;
+    position: absolute;
+    top: 52%;
+    left: 10%;
+  }
+  section#skill div.line8 {
+    width: 80%;
+    height: 1px;
+    background-color: #fff;
+    color: #fff;
+    position: absolute;
+    top: 87%;
+    left: 10%;
+  }
+
+
+  /*움직이는 아이콘*/
+  .flow_banner {
+    overflow: hidden;
+    display: flex;
+    width: 80%;
+    margin: -8vh auto -5vh;
+  }
+  .flow_banner .list {
+    display: flex;
+  }
+  .flow_banner .list > li {
+    white-space: nowrap;
+    font-size: 18px;
+    color: #fff;
+    padding: 20px;
+  }
+
+  section#skill div.flow_banner ul.list li div {
+    width: 140px;
+    height: 140px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 1.5px solid rgba(225, 225, 225, 0.7);
+    margin-right: 30px;
+    margin-right: 40px;
+    box-sizing: border-box;
+    margin-top: 0px;
+    border-radius: 25px;
+    position: relative;
+  }
+  section#skill div.flow_banner ul.list li div.html {
+    background: url(../images/html5.png) no-repeat center;
+    background-size: 70%;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 1.5px solid rgba(225, 225, 225, 0.7);
+    border-radius: 25%;
+  }
+  section#skill div.flow_banner ul.list li div.css {
+    background: url(../images/css.png) no-repeat center;
+    background-size: 52%;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 1.5px solid rgba(225, 225, 225, 0.7);
+    border-radius: 25%;
+  }
+  section#skill div.flow_banner ul.list li div.javascript {
+    background: url(../images/jq.png) no-repeat center;
+    background-size: 53%;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 1.5px solid rgba(225, 225, 225, 0.7);
+    border-radius: 25%;
+  }
+  section#skill div.flow_banner ul.list li div.jquery {
+    background: url(../images/js.png) no-repeat center;
+    background-size: 53%;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 1.5px solid rgba(225, 225, 225, 0.7);
+    border-radius: 25%;
+  }
+  section#skill div.flow_banner ul.list li div.git {
+    background: url(../images/git.png) no-repeat center;
+    background-size: 60%;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 1.5px solid rgba(225, 225, 225, 0.7);
+    border-radius: 25%;
+  }
+  section#skill div.flow_banner ul.list li div.ps {
+    background: url(../images/Photoshop.png) no-repeat center;
+    background-size: 60%;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 1.5px solid rgba(225, 225, 225, 0.7);
+    border-radius: 25%;
+  }
+  section#skill div.flow_banner ul.list li div.ai {
+    background: url(../images/ai.png) no-repeat center;
+    background-size: 75%;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 1.5px solid rgba(225, 225, 225, 0.7);
+    border-radius: 25%;
+  }
+  section#skill div.flow_banner ul.list li div.figma {
+    background: url(../images/figma.png) no-repeat center;
+    background-size: 75%;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 1.5px solid rgba(225, 225, 225, 0.7);
+    border-radius: 25%;
+  }
+  section#skill div.flow_banner ul.list li div.notion {
+    background: url(../images/notion.png) no-repeat center;
+    background-size: 70%;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 1.5px solid rgba(225, 225, 225, 0.7);
+    border-radius: 25%;
+  }
+  section#skill div.flow_banner ul.list li div:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: 1s;
+    scale: 1.05;
+  }
+  /*텍스트 박스*/
+  section#skill div.text_box {
+    width: 80%;
+    height: 250px;
+    border-radius: 60px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 18vh auto 0;
+  }
+  section#skill div.text_box p {
+    text-align: center;
+    margin: auto 0;
+    font-size: clamp(15px,10vw,25px);
+    line-height: 60px;
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  @keyframes flowRolling {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /*portpolio*/
+  section#portpolio_web {
+    width: 100%;
+    height: 100vh;
+    padding-top: 310px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  /*portpolio web line*/
+  section#portpolio_web div.line9 {
+    width: 80%;
+    height: 1px;
+    background-color: #ffffff;
+    color: #fff;
+    position: absolute;
+    top: 19%;
+    left: 10%;
+  }
+
+  section#portpolio_web div.notion_box{ width: 80px; height: 80px; float: right;  
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 1.5px solid rgba(225, 225, 225, 0.7);
+    position: absolute;
+    top: 6%;
+    left:36.5%;
+  }
+  section#portpolio_web div.notion_box:hover{ width: 80px; height: 80px; float: right;  
+    box-shadow: 0px 0px 20px rgb(192, 216, 255);
+    border: 1.5px solid rgb(157, 185, 216);
+    transition: 1s;
+  }
+  section#portpolio_web div.notion_box img{width: 50px; height: 50px; position: relative; top: 15px; left: 15px;}
+
+  section#portpolio_web h2.menu_profile {
+    width: 30px;
+    height: 200px;
+    position: absolute;
+    top: 40px;
+    left: 12%;
+    color: #ffffff;
+    font-size: 70px;
+  }
+  section#portpolio_web p {position: absolute; top: 12%; right: 12%; font-size: clamp(9px,15vw,15px);}
+
+  /*슬라이드*/
+  div.swiper.mySwiper {
+    position: relative;
+    height: 650px;
+    margin-top: -100px;
+    margin-left: 10%;
+  }
+  .swiper {
+    width: 80%;
+    height: 60%;
+  }
+  .slidegrid{
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+  }
+  .swiper-slide .slidegrid{
+    width: 90%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 2fr 0.5fr 0.5fr 1.5fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 4% 4%;
+    margin: 0 auto;
+  }
+
+  .swiper-slide div.image_box {
+    display: block;
+    width: 100%;
+    height: 90%;
+    background: url(../images/lolmockup.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    grid-row: 1/4 span;
+    grid-column: 1;
+    margin-left:4%;
+  }
+  .swiper-slide {
+    width: 30%;
+    height: 100%;
+    float: right;
+    position: relative;
+  }
+  .swiper-slide:last-child div.right_box{padding-top: 3vh}
+  .swiper-slide strong {
+    font-size: 60px;
+    display: block;
+    grid-row: 1;
+    grid-column: 2;
+    padding: 1% 1% 2%;
+    position: relative;
+    box-sizing: border-box;
+
+  }
+  .swiper-slide strong::after{
+    content: '';
+    width: 20%;
+    height: 1px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }  
+  .swiper-slide ul{    
+
+    height: 100px;
+    box-sizing: border-box;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 4;
+    grid-column: 2;
+    margin: 0 auto;
+    position: relative;
+  }
+  .swiper-slide ul li {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 1.5px solid rgba(225, 225, 225, 0.7);
+    border-radius: 15px;
+    float: right;
+    margin-right: 7%;
+    text-indent: -9999px;
+    box-sizing: border-box;
+  }
+  .swiper-slide > ul.icon_box li:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+    transform: scale(1.1);
+  }
+  .swiper-slide ul li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-indent: -9999px;
+  }
+  .swiper-slide ul li:nth-child(1) {
+    background: url(../images/whitecursor2.png) no-repeat;
+    background-position: center;
+    background-size: 60%;
+  }
+ 
+  .swiper-slide ul li:nth-child(2) {
+    background: url(../images/git.png) no-repeat;
+    background-position: center;
+    background-size: 60%;
+  }
+  .swiper-slide ul li:nth-child(3) {
+    background: url(../images/notion.png) no-repeat;
+    background-position: center;
+    background-size: 60%;
+  }
+  .swiper-slide dl {
+    width: 100%;
+    box-sizing: border-box;
+    grid-row: 2;
+    grid-column: 2;
+    margin-top: 5%;
+  }
+
+  .swiper-slide dl dt {
+    float: left;
+    font-size: 27px;
+    font-weight: 600;
+    margin-right: 0px;
+    width: 50%;
+  }
+  .swiper-slide dl dd {
+    font-size: 27px;
+    font-weight: 600;
+    width: 50%;
+    float: right;
+  }
+  .swiper-slide dl div {
+    float: left;
+  }
+  .swiper-slide div.web_icon{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-row: 3;
+    grid-column: 2;
+    margin: 0 auto;
+  }
+
+  .swiper-slide div.web_icon div{    
+    background-repeat: no-repeat;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+  }
+  .swiper-slide div.html_icon {
+    background-image: url(../images/html5.png);
+    background-size: 75%;
+    margin-right: 8%;     
+  }
+
+  .swiper-slide div.css_icon {
+    background-image: url(../images/css.png);
+    background-size: 55%;
+    margin-right: 8%;     
+  }
+  .swiper-slide div.jq_icon {
+    background-image: url(../images/jq.png);
+    background-size: 75%;
+    margin-right: 0;
+  }
+
+  .swiper-slide dl a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    color: #000;
+    font-weight: 600;
+  }
+  .swiper-slide dl div a:hover {
+    color: #fff;
+    transition: 0.5s;
+  }
+  .swiper-slide:nth-child(3) dl div.web_icon{width: 41%; box-sizing: border-box; margin-top: 50px;  margin-left: 34%; }
+  .swiper-slide:nth-child(3) dl div.html_icon {
+    background-image: url(../images/html5.png);
+    background-size: 75%;
+    margin-right: 13%;     
+  }
+  .swiper-slide:nth-child(3) dl div.css_icon{margin-right: 0;}
+  .swiper-slide:nth-child(4) dl div.web_icon{width: 41%; box-sizing: border-box; margin-top: 50px;  margin-left: 34%; }
+  .swiper-slide:nth-child(4) dl div.html_icon {
+    background-image: url(../images/html5.png);
+    background-size: 75%;
+    margin-right: 13%;     
+  }
+  .swiper-slide:nth-child(4) dl div.css_icon{margin-right: 0;}
+  .swiper-slide:nth-child(5) dl div.web_icon{width: 41%; box-sizing: border-box; margin-top: 50px;  margin-left: 34%; }
+  .swiper-slide:nth-child(5) dl div.html_icon {
+    background-image: url(../images/html5.png);
+    background-size: 75%;
+    margin-right: 13%;     
+  }
+  .swiper-slide:nth-child(5) dl div.css_icon{margin-right: 0;}
+  /*portpolio design*/
+
+  section#portpolio {
+    width: 100%;
+    height: 900px;
+    padding-top: 310px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  section#portpolio h2.menu_profile {
+    width: 30px;
+    height: 200px;
+    position: absolute;
+    top: 40px;
+    left: 12%;
+    color: #ffffff;
+    font-size: 70px;
+  }
+  section#portpolio div.line14 {
+    width: 80%;
+    height: 1px;
+    background-color: #fff;
+    color: #fff;
+    position: absolute;
+    top: 180px;
+    left: 10%;
+  }
+  section#portpolio div.notion_box{width: 80px; height: 80px; float: right;  
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 1.5px solid rgba(225, 225, 225, 0.7);
+    position: absolute;
+    top: 6%;
+    left:29%;
+  }
+  section#portpolio div.notion_box:hover{ width: 80px; height: 80px; float: right;  
+    box-shadow: 0px 0px 20px rgb(192, 216, 255);
+    border: 1.5px solid rgb(157, 185, 216);
+    transition: 1s;
+  }
+  section#portpolio div.notion_box img{width: 50px; height: 50px; position: relative; top: 15px; left: 15px;}
+
+  section#portpolio {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  div#portpolio {
+    position: relative;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+  }
+
+  #portpolio > .mySwiper1 {
+    width: 70%;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    z-index: 100;
+  }
+
+  #portpolio > .mySwiper1 .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    z-index: 10;
+  }
+
+  #portpolio > .mySwiper1 .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 100;
+  }
+  #portpolio > .mySwiper1 .swiper-slide:hover .btn-hover {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    display: block;
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-family: "Bagel Fat One", system-ui;
+}
+
+#portpolio > .mySwiper1 .swiper-slide:hover .btn-hover:focus {
+    outline: none; }
+.btn-hover.color-10 {
+  background-image: linear-gradient(to right, #ecb7cd, #ffd0bf, #ffabca , #ffe4b8);
+  box-shadow: 0 4px 15px 0 rgb(235, 223, 255);
+  display: none;
+  position: absolute;
+  top: 47%; left: 47%; transform: translate(-50%, -50%);
+  font-family: "Bagel Fat One", system-ui;
+  z-index: 99999;
+}
+#portpolio > .mySwiper1 .swiper-slide a{font-size: 25px;   font-family: "Bagel Fat One", system-ui; letter-spacing: 1.5px;}
+
+section#portpolio p {position: absolute; top: 12%; right: 12%; font-size: clamp(9px,15vw,15px);}
+.background_design{width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.3); z-index: 999; position: absolute; top: 0px; opacity: 0; transition: all 0.5s;}
+#portpolio > .mySwiper1 .swiper-slide:hover div.background_design{opacity: 1;}
+  /*contact*/
+  div.contact_box_left {
+    width: 49%;
+    height: 500px;
+    float: left;
+    text-align: center;
+    margin-top: 20%;
+    position: relative;
+  }
+  div.contact_box_right {
+    width: 40%;
+    height: 350px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(50px);
+    box-shadow: 0px 0px 50px rgba(227, 228, 237, 0.5);
+    border: 1.5px solid rgba(225, 225, 225, 0.7);
+    border-radius: 25%;
+    float: right;
+    margin-top: 16%;
+    margin-right: 11%;
+    border-radius: 30px;
+    text-align: center;
+    padding: 60px;
+    box-sizing: border-box;
+  }
+  div.contact_box_left strong:nth-child(1) {
+    font-size: 60px;
+    display: block;
+  }
+  div.contact_box_left strong:nth-child(2) {
+    font-size: 30px;
+  }
+  div.contact_box_left strong:nth-child(1)::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ffc8c8;
+    display: inline-block;
+    border-radius: 50%;
+    top: 0;
+    margin-left: 5px;
+  }
+  div.contact_box_right strong {
+    font-size: 30px;
+    margin-bottom: 30px;
+    display: block;
+    width: 120%;
+    margin-left: -10%;
+  }
+  div.contact_box_right p {
+    font-size: 30px;
+    letter-spacing: 3px;
+    width: 120%;
+    margin-left: -10%;
+  }
+  div.contact_box_right p:nth-child(2)::before {
+    content: "";
+    display: inline-block;
+    background-image: url("../images/phone.png");
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+    transform: rotate(15deg);
+  }
+  div.contact_box_right p:nth-child(3)::before {
+    content: "";
+    display: inline-block;
+    background-image: url("../images/email.png");
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  /* PC (해상도 1024px)*/
+  @media all and (min-width: 1024px) {
+    
+  }
+
+  /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+  }
+
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+        /** 화면 전체를 덮는 배경 레이어의 위치, 크기, 투명도 지정 > 기본적으로 표시되지 않도록 설정 */
+        .gray_layer {
+          position: fixed;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          background: black;
+          opacity: 0.60;
+          display: none;
+      }
+
+      /** 이미지가 표현될 레이어를 화면 중앙에 배치 > 기본적으로 표시되지 않도록 설정 */
+      .over_layer {
+          /* 요소의 좌측상단 꼭지점이 화면 중앙에 위치하게 된다. */
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          /* 요소의 크기/2 만큼 왼쪽,상단 방향으로 이동시켜 가운데 배치한다 */
+        transform: translate(-50%,-50%);
+          display: none;
+          z-index: 9999;
+      }

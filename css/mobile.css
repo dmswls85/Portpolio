@@ -72,13 +72,12 @@ header ul li a {
     float: right;
     width: 40%;
     margin-top: 10px;
-    margin-right: 200px;
     height: 100px;
   }
   section#home > nav.nav1 ul {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   section#home > nav.nav1 ul li a {
     width: 100%;
@@ -153,16 +152,6 @@ header ul li a {
     border-radius: 35px;
     z-index: 10;
   }
-  /* section#profile div.box {
-  background-color: #d4d4d4;
-  width: 390px;
-  height: 500px;
-  border-radius: 50px;
-  z-index: -10;
-  position: absolute;
-  top: 1210px;
-  left: 260px;
-} */
 
   section#profile > h2 {
     float: right;
@@ -682,32 +671,35 @@ header ul li a {
     height: 1400px;
   }
   #portpolio_web {
-    height: 150vw;
+    height: 100%
   }
   #design {
-    height: 9000px;
+    height: 8500px;
   }
   #contact {
-    height: 500px;
+    height: 100%;
   }
   h1 img {
     display: none;
   }
   section#home > nav.nav1 {
     float: right;
-    width: 100%;
+    width: 100vw;
     top: 0px;
     height: 60px;
     position: fixed;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(30px);
     z-index: 3000;
+    display: flex;
+    justify-content: center;
   }
   section#home > nav.nav1 ul {
+    width: 90%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 5px 0;
+    justify-content: center;
+    gap: 15px;
   }
   section#home > nav.nav1 ul li a {
     width: 100%;
@@ -725,6 +717,7 @@ header ul li a {
     border-radius: 30px;
     line-height: 50px;
     text-align: center;
+    line-height: 50px;
   }
   section#home > nav.nav1 ul li a:hover {
     color: #000000;
@@ -955,11 +948,47 @@ header ul li a {
     align-items: center;
   }
 
-  .swiper-slide div.image_box {
+  .swiper-slide:nth-child(1) div.image_box {
     display: block;
     width: 80%;
     height: 50vw;
-    background: url(../images/OR7V1C0.jpg);
+    background: url(../images/lolmockup.png);
+    background-size: 100% 100%;
+    border-radius: 15px;
+    margin: 0 auto;
+  }
+  .swiper-slide:nth-child(2) div.image_box {
+    display: block;
+    width: 80%;
+    height: 50vw;
+    background: url(../images/shinsaegae_mockup.png);
+    background-size: 100% 100%;
+    border-radius: 15px;
+    margin: 0 auto;
+  }
+  .swiper-slide:nth-child(3) div.image_box {
+    display: block;
+    width: 80%;
+    height: 50vw;
+    background: url(../images/hansot_mockup.png);
+    background-size: 100% 100%;
+    border-radius: 15px;
+    margin: 0 auto;
+  }
+  .swiper-slide:nth-child(4) div.image_box {
+    display: block;
+    width: 80%;
+    height: 50vw;
+    background: url(../images/coffeebean_mockup.png);
+    background-size: 100% 100%;
+    border-radius: 15px;
+    margin: 0 auto;
+  }
+  .swiper-slide:nth-child(5) div.image_box {
+    display: block;
+    width: 80%;
+    height: 50vw;
+    background: url(../images/zzam_mockuo.png);
     background-size: 100% 100%;
     border-radius: 15px;
     margin: 0 auto;
@@ -984,16 +1013,21 @@ header ul li a {
     box-shadow: 0px 0px 20px rgba(227, 228, 237, 0.37);
   }
   .swiper-slide div.portpolio_web_box dl {
-    width: 60%;
+    width: 80%;
     height: 30%;
     box-sizing: border-box;
     margin: 5% auto 0;
     font-size: clamp(15px,3vw,30px);
+
+
   }
   .swiper-slide div.portpolio_web_box dt {
     font-weight: 600;
     float: left;
-    width: 48%;
+    width: 50%;
+    padding-left: 15%;
+    box-sizing: border-box;
+    margin-right: 5%;
   }
   .swiper-slide div.portpolio_web_box dd:nth-child(3) {
     text-align: center;
@@ -1100,7 +1134,7 @@ header ul li a {
     text-align: left;
     line-height: 47px;
     border-radius: 25px;
-    margin: 20px auto 40px;
+    margin: -20px auto 40px;
     padding-left: 30px;
     position: relative;
     box-sizing: border-box;
@@ -1125,86 +1159,78 @@ header ul li a {
   }
 
   /* 디자인 사진 */
-
+  section div.design_box ul.design1 li{margin-bottom: 40px;}
   section div.design_box ul.design1 li:nth-child(1) {
     background: url(../design/design1.png);
     background-size: 100% 100%;
     background-position: center;
     width: 100%;
-    height: 70vw;
+    height: 75vw;
   }
-  section div.design_box ul.design1 li:nth-child(3) {
+  section div.design_box ul.design1 li:nth-child(2) {
     background: url(../design/design2.png);
     background-size: 100% 100%;
     background-position: center;
     width: 100%;
-    height:70vw;
+    height:80vw;
   }
-  section div.design_box ul.design1 li:nth-child(5) {
+  section div.design_box ul.design1 li:nth-child(3) {
     background: url(../design/design3.png);
     background-size: 100% 100%;
     background-position: center;
     width: 100%;
-    height: 70vw;
+    height: 100vw;
   }
-  section div.design_box ul.design1 li:nth-child(7) {
+  section div.design_box ul.design1 li:nth-child(4) {
     background: url(../design/design4.png);
     background-size: 100% 100%;
     background-position: center;
     width: 100%;
-    height: 70vw;
+    height: 75vw;
   }
-  section div.design_box ul.design1 li:nth-child(9) {
+  section div.design_box ul.design1 li:nth-child(5) {
     background: url(../design/design5.png);
     background-size: 100% 100%;
     background-position: center;
     width: 100%;
-    height:70vw;
+    height:100vw;
   }
-  section div.design_box ul.design1 li:nth-child(11) {
+  section div.design_box ul.design1 li:nth-child(6) {
     background: url(../design/design6.png);
     background-size: 100% 100%;
     background-position: center;
     width: 100%;
-    height: 70vw;
+    height: 40vw;
   }
-  section div.design_box ul.design1 li:nth-child(13) {
+  section div.design_box ul.design1 li:nth-child(7) {
     background: url(../design/design7.png);
     background-size: 100% 100%;
     background-position: center;
     width: 100%;
     height: 70vw;
   }
-  section div.design_box ul.design1 li:nth-child(15) {
+  section div.design_box ul.design1 li:nth-child(9) {
     background: url(../design/design8.png);
     background-size: 100% 100%;
     background-position: center;
     width: 100%;
-    height: 70vw;
+    height: 100vw;
   }
-  section div.design_box ul.design1 li:nth-child(17) {
+  section div.design_box ul.design1 li:nth-child(10) {
     background: url(../design/design9.png);
     background-size: 100% 100%;
     background-position: center;
     width: 100%;
-    height: 30vw;
+    height: 20vw;
   }
-  section div.design_box ul.design1 li:nth-child(19) {
+  section div.design_box ul.design1 li:nth-child(11) {
     background: url(../design/design10.png);
     background-size: 100% 100%;
     background-position: center;
     width: 100%;
-    height: 30vw;
+    height: 20vw;
   }
-  section div.design_box ul.design1 li:nth-child(21) {
-    background: url(../design/design11.png);
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 80vw;
-  }
-  section div.design_box ul.design1 li:nth-child(23) {
+  section div.design_box ul.design1 li:nth-child(12) {
     background: url(../design/cip_design.png);
     background-size: cover;
     background-position: top;
@@ -1212,7 +1238,15 @@ header ul li a {
     width: 100%;
     height: 50vw;
   }
-  section div.design_box ul.design1 li:nth-child(25) {
+  section div.design_box ul.design1 li:nth-child(13) {
+    background: url(../design/design11.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vw;
+  }
+  section div.design_box ul.design1 li:nth-child(15) {
     background: url(../design/index.jpg);
     background-size: cover;
     background-position: top;
@@ -1220,71 +1254,71 @@ header ul li a {
     width: 100%;
     height: 50vw;
   }
-  section div.design_box ul.design1 li:nth-child(27) {
-    background: url(../design/10.JPG);
+  section div.design_box ul.design1 li:nth-child(17) {
+    background: url(../design/prototypemob.png);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
     width: 100%;
-    height: 50vw;
+    height: 80vw;
+  }
+  section div.design_box ul.design1 li:nth-child(19) {
+    background: url(../design/smartmob.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vw;
+  }
+  section div.design_box ul.design1 li:nth-child(21) {
+    background: url(../design/researchmob.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vw;
+  }
+  section div.design_box ul.design1 li:nth-child(23) {
+    background: url(../design/survmob.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vw;
+  }
+  section div.design_box ul.design1 li:nth-child(25) {
+    background: url(../design/baymob.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vw;
+  }
+  section div.design_box ul.design1 li:nth-child(27) {
+    background: url(../design/visualmob.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vw;
   }
   section div.design_box ul.design1 li:nth-child(29) {
-    background: url(../design/9.JPG);
+    background: url(../design/tossmob.png);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
     width: 100%;
-    height: 50vw;
+    height: 80vw;
   }
   section div.design_box ul.design1 li:nth-child(31) {
-    background: url(../design/7.JPG);
+    background: url(../design/trandmob.png);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
     width: 100%;
-    height: 50vw;
+    height: 80vw;
   }
   section div.design_box ul.design1 li:nth-child(33) {
-    background: url(../design/6.JPG);
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 50vw;
-  }
-  section div.design_box ul.design1 li:nth-child(35) {
-    background: url(../design/4.JPG);
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 50vw;
-  }
-  section div.design_box ul.design1 li:nth-child(37) {
-    background: url(../design/3.JPG);
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 50vw;
-  }
-  section div.design_box ul.design1 li:nth-child(39) {
-    background: url(../design/2.JPG);
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 50vw;
-  }
-  section div.design_box ul.design1 li:nth-child(41) {
-    background: url(../design/1.JPG);
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 50vw;
-  }
-  section div.design_box ul.design1 li:nth-child(43) {
     background: url(../design/persona.png);
     background-size: cover;
     background-position: top;
